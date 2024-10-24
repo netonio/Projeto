@@ -28,7 +28,7 @@
     <div class="conteudo"> <!--DEFININDO O CONTEUDO-->
 
         <!--COMEÇANDO O CARROSSEL-->
-        <div class="carrossel">
+        <section class="carrossel">
             <div class="slides">
 
                 <!--CRIANDO OS BOTÕES-->
@@ -67,62 +67,81 @@
                 <label for="radio3" class="manual-button"></label>
                 <label for="radio4" class="manual-button"></label>
             </div>
-        </div>
+        </section>
 
-        <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-            <h2>Favoritos</h2>
-        </div>
-        <hr>
-        <!--CRIANDO A CAIXA COM IMAGENS:-->
-        <div class="image-container"> 
-            <figure>
-                <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                <!--CRIANDO A LEGENDA:-->
-                <figcaption>Xícara de café <p style="font-size: medium;">expresso</p></figcaption>
-            </figure>
-            <figure>
-                <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                <!--CRIANDO A LEGENDA:-->
-                <figcaption>Xícara de café <p style="font-size: medium;">preto</p></figcaption>
-            </figure>
-            <figure>
-                <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                <!--CRIANDO A LEGENDA:-->
-                <figcaption>Xícara de café <p style="font-size: medium;">com leite</p></figcaption>
-            </figure>
-        </div>
-        <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-            <h2>Novidades</h2>
-        </div>
-        <hr>
-        <!--CRIANDO A CAIXA COM IMAGENS:-->
-        <div class="image-container">
-            <figure>
-                <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                <!--CRIANDO A LEGENDA:-->
-                <figcaption>Xícara de café <p style="font-size: medium;">expresso</p></figcaption>
-            </figure>
-            <figure>
-                <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                <!--CRIANDO A LEGENDA:-->
-                <figcaption>Xícara de café <p style="font-size: medium;">preto</p></figcaption>
-            </figure>
-            <figure>
-                <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                <!--CRIANDO A LEGENDA:-->
-                <figcaption>Xícara de café <p style="font-size: medium;">com leite</p></figcaption>
-            </figure>
-        </div>
+        <section>
+            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                <h2>Favoritos</h2>
+            </div>
+            <hr>
+            <!--CRIANDO A CAIXA COM IMAGENS:-->
+            <div class="image-container"> 
+                <figure>
+                    <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
+                    <!--CRIANDO A LEGENDA:-->
+                    <figcaption>Xícara de café <p style="font-size: medium;">expresso</p></figcaption>
+                </figure>
+                <figure>
+                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                    <!--CRIANDO A LEGENDA:-->
+                    <figcaption>Xícara de café <p style="font-size: medium;">preto</p></figcaption>
+                </figure>
+                <figure>
+                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                    <!--CRIANDO A LEGENDA:-->
+                    <figcaption>Xícara de café <p style="font-size: medium;">com leite</p></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                <h2>Novidades</h2>
+            </div>
+            <hr>
+            <!--CRIANDO A CAIXA COM IMAGENS:-->
+            <div class="image-container">
+                <figure>
+                    <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
+                    <!--CRIANDO A LEGENDA:-->
+                    <figcaption>Xícara de café <p style="font-size: medium;">expresso</p></figcaption>
+                </figure>
+                <figure>
+                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                    <!--CRIANDO A LEGENDA:-->
+                    <figcaption>Xícara de café <p style="font-size: medium;">preto</p></figcaption>
+                </figure>
+                <figure>
+                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                    <!--CRIANDO A LEGENDA:-->
+                    <figcaption>Xícara de café <p style="font-size: medium;">com leite</p></figcaption>
+                </figure>
+            </div>
+        </section>
     </div>
     <footer> <!--DEFININDO O RODAPÉ-->
-        <h3>Endereço:</h3>
-        <p>Rua não sei oq</p>
 
-        <h3><a href="#">Contato:</a></h3>
-        <ul>
-            <li>Telefone: (81) 99999-8888</li>
-            <li>Email: casinhabrancacafeteria@gmail.com</li>
-        </ul>
+        <section class="informacoes">
+            <div class="endereco">
+                <h3>Endereço:</h3>
+                <p>Rua não sei oq</p>
+                <a href="#" style="text-decoration: underline;">Google Maps</a>
+            </div>
+
+            <div class="contato">
+                <h3><a href="sobre.html#formulario">Contato:</a></h3>
+                <ul>
+                    <li>Telefone: (81) 99999-8888</li>
+                    <li>Email: casinhabrancacafeteria@gmail.com</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="redes-sociais">
+            <ul>
+            <li><a href="https://www.instagram.com/casinhabrancacafeteria/" target="_blank"><img src="Imagens/instagram-icon.jfif" alt="Icone Instagram"></a></li>
+            </ul>
+        </section>
     </footer>
 
     <script src="script.js"></script> <!--LINKANDO O SCRIPT-->
