@@ -27,7 +27,7 @@ function mudarTema(){
     const corSecundaria = getComputedStyle(root).getPropertyValue('--cor-secundaria').trim();
     const corFonte = getComputedStyle(root).getPropertyValue('--cor-fonte').trim();
 
-    if(corPrincipal === 'rgb(56, 133, 124)' && corSecundaria === 'rgb(255,255,255)' && corFonte === 'rgb(0,0,0)'){
+    if(corPrincipal === 'rgb(56, 133, 124)'){
         root.style.setProperty('--cor-principal', 'rgb(77, 54, 35)');
         root.style.setProperty('--cor-secundaria', 'rgb(205, 205, 163)');
         root.style.setProperty('--cor-fonte', 'rgb(77, 54, 35)');
