@@ -1,0 +1,280 @@
+/*Importação de fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Arima", sans-serif; /*Fontes que serão utilizadas*/
+}
+
+:root{
+    --cor-principal: rgb(56, 133, 124); /*Cor para fachada e rodapé*/
+    --cor-secundaria: rgb(255, 255, 255); /*Cor para o body*/
+    --cor-terciaria: rgb(255,255,255); /*Cor para o contraste com a primária*/
+    --cor-fonte: rgb(0,0,0); /*Cor para a fonte de conteúdo*/
+}
+
+header{
+    width: 100%;
+    height: 220px;
+    border: 1px solid var(--cor-principal);
+    background-color:  var(--cor-principal);
+    color: var(--cor-terciaria);
+    text-align: center;
+}
+
+.tema{
+    padding: 4px;
+    margin: 8px;
+    border: none;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    font-size: 1.5rem;
+}
+
+.tema:hover{
+    font-size: 1.6rem;
+    transition:font-size 1s; /*Transição para o aumento da fonte*/
+    cursor: pointer;
+}
+
+.logo{
+    margin:0;
+    padding-top: 5px;
+    height: 150px;
+}
+
+.menu-desktop{
+    display: flex; /*Deixa os itens lado a lado quando há espaço*/
+    justify-content: space-between; /*Espaçamento do conteúdo*/
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    padding-right: 350px;
+}
+
+.nav-list ul{ /*Acessa a lista de nav-list*/
+    display: flex;
+    justify-content: center;
+    list-style: none; /*Remove o sublinhado*/
+    padding: 10px 0px;
+}
+
+.nav-item{
+    margin-right: 150px;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover{
+    font-size: 1.6rem;
+    transition: 0.5s;
+}
+
+.conteudo{
+    min-height: 300px; /*Comprimento min.*/
+    font-weight: 400;
+    flex: 1;
+    border: 1px solid var(--cor-secundaria);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fonte);
+    padding: 20px; /*Espaçamento*/
+}
+
+.container{
+    width: 18%;
+    padding-top: 3px;
+    padding-left: 10px;
+    margin: 0;
+    border-color: var(--cor-principal);
+    background-color: var(--cor-principal);
+    text-align: left;
+    color: var(--cor-terciaria);
+}
+
+hr{
+    border: 1px;
+    margin: 0; /*Deixando grudado ao container*/
+    height: 2px;
+    background-color: var(--cor-principal);
+    width: 100%;
+}
+
+figure{
+    display: inline-block; /*Colocando uma imagem ao lado da outra*/
+    margin: 30px; /*Espaçamento entre as imagens*/
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption{
+    font-size: larger;
+    margin-top: 5px; /*Distância da legenda até a imagem*/
+}
+
+.carrossel{
+    margin: 30px auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden; /*Esconde as outras imagens*/
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex; /*Deixa as imagens lado a lado*/
+}
+
+.slides input{
+    display:none; /*Esconde os botões*/
+}
+
+.slide{
+    width: 25%; /*As imagens ocupam 25% do tamanho total*/
+    position: relative; /*Faz com que as imagens se movam*/
+    transition: 2s; /*Atrasa a transição*/
+}
+
+.slide img{
+    width: 800px;
+}
+
+.navegacao-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px; /*Margem em relação ao topo da imagem*/
+    display: flex;
+    justify-content: center;
+}
+
+.manual-button{
+    border: 2px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer; /*Muda o cursor*/
+    transition: 1s;
+}
+
+.manual-button:not(:last-child){
+    margin-right: 40px; /*Todos os botões (menos o ultimo, "last child") terão espaçamento na direita*/
+}
+
+.manual-button:hover{
+    background-color: #FFF; /*Quando o cursor estiver em cima, o fundo mudará de cor*/
+    transition: 1s;
+}
+
+/*CRIANDO O DESLIZE DE IMAGENS*/
+#radio1:checked ~ .first{
+    margin-left: 0; /*Quando o primeiro botão estiver pressionado, a margem será 0*/
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%; /*Quando o segundo botão estiver pressionado, a margem será -25*/
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%; /*Quando o terceiro botão estiver pressionado, a margem será -50*/
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%; /*Quando o quarto botão estiver pressionado, a margem será -75*/
+}
+
+.auto-navegacao div{ /*Define a aparencia de todos os elementos dentro da div*/
+    border: 2px solid #2600ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.auto-navegacao{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px; /*Margem em relação ao topo da página*/
+    display: flex;
+    justify-content: center;
+}
+
+.auto-navegacao div:not(:last-child){
+    margin-right: 40px; /*Todos os botões (menos o ultimo, "last child") terão espaçamento na direita*/
+}
+
+#radio1:checked ~ .auto-navegacao .auto-button1{
+    background-color: #FFF; /*Muda o fundo do botão*/
+}
+
+#radio2:checked ~ .auto-navegacao .auto-button2{
+    background-color: #FFF; /*Muda o fundo do botão*/
+}
+
+#radio3:checked ~ .auto-navegacao .auto-button3{
+    background-color: #FFF; /*Muda o fundo do botão*/
+}
+
+#radio4:checked ~ .auto-navegacao .auto-button4{
+    background-color: #FFF; /*Muda o fundo do botão*/
+}
+
+footer{
+    width: 100%;
+    height: 300px;
+    border: 1px solid  var(--cor-principal);
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    padding: 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer h3{
+    padding-top: 20px;
+}
+
+@media screen and (max-width:1080px){
+    .menu-desktop{
+        display:none;
+    }
+
+    .carrossel{
+        width: 600px;
+        height: 400px;
+    }
+
+    .container{
+        width: auto;
+        justify-content: baseline;
+    }
+
+    .produto{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:780px){
+    .carrossel{
+        width: 400px;
+        height: 200px;
+    }
+}
