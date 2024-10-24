@@ -15,9 +15,13 @@ function nextImage(){
     document.getElementById('radio'+ count).checked = true; /*Muda o botão ativo automaticamente, de acordo com o count*/
 }
 
-const root = document.documentElement;
+document.addEventListener("DOMContentLoaded", function() {
+    const root = document.documentElement;
+});
 
 function mudarTema(){
+
+    const root = document.documentElement;
     
     const corPrincipal = getComputedStyle(root).getPropertyValue('--cor-principal').trim();
     const corSecundaria = getComputedStyle(root).getPropertyValue('--cor-secundaria').trim();
