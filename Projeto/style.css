@@ -1,6 +1,7 @@
-/*Importação de fonte*/
+/* Importação da fonte do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
 
+/* Resetando margens, preenchimentos e definindo box-sizing para todos os elementos */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +9,7 @@
     font-family: "Arima", sans-serif; /*Fontes que serão utilizadas*/
 }
 
+/* Definindo cores principais da paleta para fácil manutenção */
 :root{
     --cor-principal: rgb(56, 133, 124); /*Cor para fachada e rodapé*/
     --cor-secundaria: rgb(255, 255, 255); /*Cor para o body*/
@@ -15,6 +17,7 @@
     --cor-fonte: rgb(0,0,0); /*Cor para a fonte de conteúdo*/
 }
 
+/* Estilizando o cabeçalho do site */
 header{
     width: 100%;
     height: 220px;
@@ -24,7 +27,8 @@ header{
     text-align: center;
 }
 
-.tema{ /*Botão alterar tema*/
+/* Estilizando o botão para mudar o tema */
+.tema{ 
     padding: 4px;
     margin: 8px;
     border: none;
@@ -45,15 +49,18 @@ header{
     height: 150px;
 }
 
+/* Estilizando o menu de navegação em desktop */
 .menu-desktop{
     display: flex; /*Deixa os itens lado a lado quando há espaço*/
     justify-content: space-between; /*Espaçamento do conteúdo*/
+    width: 100%;
 }
 
 .nav-list{
     display: flex;
     align-items: center;
-    padding-right: 350px;
+    justify-content: center; /*Centraliza os itens*/
+    width: 100%; /*Faz com que utilize toda a largura disponível*/
 }
 
 .nav-list ul{ /*Acessa a lista de nav-list*/
@@ -61,10 +68,12 @@ header{
     justify-content: center;
     list-style: none; /*Remove o sublinhado*/
     padding: 10px 0px;
+    margin: 0;
+    margin-right: 40px;
 }
 
 .nav-item{
-    margin-right: 150px;
+    margin: 0 100px;
 }
 
 .nav-link{
@@ -80,20 +89,35 @@ header{
 }
 
 .conteudo{
-    min-height: 300px; /*Comprimento min.*/
+    min-height: 100vh; /*Comprimento min.*/
     font-weight: 400;
-    flex: 1;
     border: 1px solid var(--cor-secundaria);
     background-color: var(--cor-secundaria);
     color: var(--cor-fonte);
     padding: 20px; /*Espaçamento*/
 }
 
+.local{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mapa{
+    width: 50%; /* O mapa ocupa 50% da tela */
+    height: 300px;
+}
+
+#mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
 .container{
-    width: 18%;
+    width: 18%; /* Ocupa apenas 18% da tela */
     padding-top: 3px;
     padding-left: 10px;
-    margin: 0;
+    margin: 0; /* Gruda com o hr */
     border-color: var(--cor-principal);
     background-color: var(--cor-principal);
     text-align: left;
@@ -108,20 +132,35 @@ hr{
     width: 100%;
 }
 
-figure{
-    display: inline-block; /*Colocando uma imagem ao lado da outra*/
-    margin: 30px; /*Espaçamento entre as imagens*/
-    text-align: center;
+/* Configurando o layout do container de imagens */
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as figuras se movam para a linha seguinte */
+    justify-content: space-between; /* Distribui o espaço entre as figuras */
+    margin: 30px; /* Espaçamento entre as imagens */
 }
 
-img{
-    max-width: 100%;
+figure {
+    display: flex;
+    align-items: center; /* Alinha verticalmente imagem e legenda */
+    width: calc(45% - 15px); /* Calcula a largura de cada figura para caber duas na linha */
+    margin-bottom: 20px; /* Espaçamento entre as linhas */
+    margin-left: 5%;
+}
+
+figure hr{
+    width: calc(250% - 15px); /* torna o hr responsivo */
+}
+
+figure img {
+    max-width: 20%; /* Tamanho da imagem */
     height: auto;
 }
 
-figcaption{
+figcaption {
     font-size: larger;
-    margin-top: 5px; /*Distância da legenda até a imagem*/
+    margin-left: 10px; /* Distância da legenda até a imagem */
+    margin-top: -50px;
 }
 
 .carrossel{
@@ -229,10 +268,11 @@ figcaption{
     background-color: #FFF; /*Muda o fundo do botão*/
 }
 
+/* Estilizando o rodapé da página */
 footer{
-    display: flex; /*Deixa os itens lado a lado quando há espaço*/
-    justify-content: space-between; /*Deixa os itens um ao lado do outro, nos cantos da página*/
-    align-items: flex-start; /*Deixa os itens alinhados no topo do rodapé*/
+    display: flex; /* Os itens ficarão alinhados desde que  */
+    justify-content: space-between; /* Deixa os itens nos cantos */
+    align-items: flex-start; /* Deixa os itens no topo */
     width: 100%;
     height: 300px;
     border: 1px solid  var(--cor-principal);
@@ -243,8 +283,8 @@ footer{
 
 footer a img{
     max-width: 50px;
-    border-style:ridge; /*Adiciona estilo a borda*/
-    border-radius: 25px; /*Deixa a imagem circular*/
+    border-style:ridge; /* Estiliza a borda da imagem */
+    border-radius: 15px; /* Deixa a imagem redonda */
     border-color: var(--cor-secundaria);
 }
 
@@ -262,29 +302,31 @@ footer h3{
 }
 
 .informacoes{
-    display: flex; 
+    display: flex;
     flex-direction: column; /* Coloca "Endereço" e "Contato" em coluna */
 }
 
 .redes-sociais{
-    display: flex; /*Deixa os botões lado a lado quando há espaço*/
+    display: flex;
 }
 
 .redes-sociais ul {
-    display: flex; /*Deixa os botões lado a lado quando há espaço*/
-    justify-content: flex-end; /*Alinha os botões no canto da página*/
+    display: flex;
+    justify-content: flex-end;
     padding: 0;
     margin: 0;
 }
 
 .redes-sociais ul a{
-    display: block; /* Cada link ocupará toda a largura */
+    display: block;
     padding: 20px;
 }
 
+/* Ajustes para diferentes tamanhos de tela */
 @media screen and (max-width:1080px){
-    .menu-desktop{
-        display:none;
+
+    .nav-item{
+        margin: 0 70px;
     }
 
     .carrossel{
@@ -292,20 +334,58 @@ footer h3{
         height: 400px;
     }
 
+    .carrossel img{
+        width: 100%;
+        height: 100%;
+    }
+
     .container{
         width: auto;
         justify-content: baseline;
     }
 
-    .produto{
-        width: 100px;
-        height: 100px;
+    figure {
+        width: calc(45% - 15px); /* Faz com que cada figura ocupe toda a largura */
+        margin-left: 5%;
+    }
+    
+    figure img {
+        max-width: 30%; /* Tamanho da imagem */
+        height: auto;
+    }
+
+    figure hr{
+        width: calc(150% - 15px);
     }
 }
 
 @media screen and (max-width:780px){
+    
+    .menu-desktop{
+        display: none;
+    }
+
     .carrossel{
         width: 400px;
         height: 200px;
+    }
+
+    .carrossel img{
+        width: 100%;
+        height: 100%;
+    }
+
+    figure {
+        width: calc(95% - 15px); /* Faz com que cada figura ocupe toda a largura */
+        margin-left: 5%;
+    }
+
+    figure img {
+        max-width: 30%; /* Tamanho da imagem */
+        height: auto;
+    }
+
+    figure hr{
+        width: calc(150% - 15px);
     }
 }
