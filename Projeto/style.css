@@ -324,7 +324,7 @@ footer h3{
 }
 
 /* Ajustes para diferentes tamanhos de tela */
-@media screen and (max-width:1080px){
+@media screen and (max-width:1100px){
 
     .nav-item{
         margin: 0 70px;
@@ -358,10 +358,19 @@ footer h3{
     figure hr{
         width: calc(150% - 15px);
     }
+
+    footer a img{
+        max-width: 40px;
+        border-radius: 12px;
+    }
 }
 
-@media screen and (max-width:780px){
+@media screen and (max-width:800px){
     
+    *{
+        overflow-x: hidden;
+    }
+
     .menu-desktop{
         display: none;
     }
@@ -388,5 +397,24 @@ footer h3{
 
     figure hr{
         width: calc(150% - 15px);
+    }
+
+    footer a img{
+        max-width: 35px;
+        border-style:ridge; 
+        border-radius: 10px; /* Deixa a imagem redonda */
+        border-color: var(--cor-secundaria);
+    }
+
+    .redes-sociais ul {
+        display: flex;
+        margin: 0;
+    }
+
+    .redes-sociais ul a{
+        display: inline-block;
+        padding-top: 20px;
+        padding: 0;
+        margin-right: calc(10% + 25px);
     }
 }
