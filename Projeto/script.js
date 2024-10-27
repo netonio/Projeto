@@ -46,6 +46,17 @@ if(window.location.pathname.endsWith('index.html')) { //O código abaixo só aco
 //GARANTE QUE OS ELEMENTOS ESTEJAM DISPONÍVEIS PARA USO
 document.addEventListener("DOMContentLoaded", function() {
     const root = document.documentElement;
+    const tema = localStorage.getItem('tema')
+
+    if(tema === 'escuro'){
+        root.style.setProperty('--cor-principal', 'rgb(77, 54, 35)');
+        root.style.setProperty('--cor-secundaria', 'rgb(195, 195, 140)');
+        root.style.setProperty('--cor-fonte', 'rgb(77, 54, 35)');
+    }else{
+        root.style.setProperty('--cor-principal', 'rgb(56, 133, 124)');
+        root.style.setProperty('--cor-secundaria', 'rgb(255,255,255)');
+        root.style.setProperty('--cor-fonte', 'rgb(0,0,0)');
+    }
 });
 
 function mudarTema(){
@@ -60,27 +71,102 @@ function mudarTema(){
         root.style.setProperty('--cor-principal', 'rgb(77, 54, 35)');
         root.style.setProperty('--cor-secundaria', 'rgb(195, 195, 140)');
         root.style.setProperty('--cor-fonte', 'rgb(77, 54, 35)');
+        localStorage.setItem('tema', 'escuro') // Armazena a preferência
     }else{
         root.style.setProperty('--cor-principal', 'rgb(56, 133, 124)');
         root.style.setProperty('--cor-secundaria', 'rgb(255,255,255)');
         root.style.setProperty('--cor-fonte', 'rgb(0,0,0)');
+        localStorage.setItem('tema', 'claro') // Armazena a preferência
     }
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-    const btdropdown = document.querySelector('.botao-dropdown');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const btdropdown = document.querySelectorAll('.botao-dropdown'); // Seleciona todos os botões de dropdown
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu'); // Seleciona todos os menus dropdown
+    const botaoMobileMenu = document.querySelector('.botao-menu-mobile');
+    const mobileMenu = document.querySelector('.menu-mobile');
 
-    btdropdown.addEventListener('click', function () {
-        dropdownMenu.classList.toggle('show');
+    // Toggle do menu dropdown
+    btdropdown.forEach((btn, index) => {
+        btn.addEventListener('click', function (event) {
+            event.stopPropagation(); // Impede o fechamento do dropdown ao clicar no botão
+            dropdownMenus[index].classList.toggle('show'); // Toggle específico para o menu correspondente
+        });
     });
 
     // Fechar o dropdown se o usuário clicar fora dele
     window.addEventListener('click', function (event) {
-        if (!event.target.matches('.botao-dropdown')) {
-            if (dropdownMenu.classList.contains('show')) {
-                dropdownMenu.classList.remove('show');
+        dropdownMenus.forEach(menu => {
+            if (!event.target.closest('.dropdown-menu') && !event.target.matches('.botao-dropdown')) {
+                menu.classList.remove('show');
             }
+        });
+    });
+
+    // Toggle do menu mobile
+    botaoMobileMenu.addEventListener('click', function (event) {
+        event.stopPropagation(); // Impede o fechamento do menu mobile ao clicar no botão
+        mobileMenu.classList.toggle('abrir-menu');
+    });
+
+    // Fechar o menu mobile se o usuário clicar fora dele
+    window.addEventListener('click', function (event) {
+        if (!event.target.closest('.menu-mobile') && !event.target.matches('.botao-menu-mobile')) {
+            mobileMenu.classList.remove('abrir-menu');
         }
     });
 });
+
+if(window.location.pathname.endsWith('contato.html')) {
+    const form = document.getElementById('formulario');
+    const campos = document.querySelectorAll('.required');
+    const spans = document.querySelectorAll('.span-required');
+    const emailRegex = /^[\w\.-]+@[\w\.-]+\.\w{2,}$/;
+
+    // Função para alterar a cor da caixa e chamar o span
+    function definirErro(index) {
+        campos[index].style.border = '1px solid red';
+        spans[index].style.display = 'block';
+    }
+
+    // Função para desfazer as alterações
+    function removerErro(index){
+        campos[index].style.border = ''
+        spans[index].style.display = 'none'
+    }
+
+    // Função para validar o email, chamando a função de erro enqunato a condição não é atendida
+    function validarEmail() {
+        if (!emailRegex.test(campos[0].value)){
+            definirErro(0);
+        } else{
+            removerErro(0)
+        }
+    }
+
+    // Função para validar o nome, chamando a função de erro enqunato a condição não é atendida
+    function validarNome() {
+        if (campos[1].value.length < 3){
+            definirErro(1);
+        } else{
+            removerErro(1)
+        }
+    }
+
+    // Adiciona um listener do botão submit
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+        validarNome(); // Chama a função para validar o nome
+        validarEmail(); // Chama a função para validar o email
+
+        // Verifica se há erros
+        const hasErrors = spans[0].style.display === 'block' || spans[1].style.display === 'block';
+        if (hasErrors) {
+            alert("Um ou mais campos contém erros, por favor, verifique e tente novamente!") // Mostra o modal se houver erros
+        } else {
+            // Se não houver erros, você pode enviar o formulário aqui
+            // form.submit(); // Descomente se quiser enviar o formulário
+            console.log('Formulário enviado com sucesso!'); // Para fins de teste
+        }
+    });
+};
