@@ -12,9 +12,42 @@
     <header> <!--DEFININDO A FACHADA-->
         <img class="logo" src="Imagens/logo1.png" alt="Logo Casinha Branca">
         
-        <!--BARRA DE NAVEGAÇÃO-->
+        <!--BARRA DE NAVEGAÇÃO PARA DESKTOP-->
         <nav class="menu-desktop">
             <button onclick="mudarTema()" type="button" class="tema">&#9728;</button>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="cardapio.html" class="nav-link">Cardápio</a>
+                        <button class="botao-dropdown">&Downarrow;</button> <!--BOTÃO PARA O MENU DROPDOWN-->
+
+                        <div class="dropdown-menu"> <!--LINKANDO AS SESSÕES-->
+                            <a href="cardapio.html#cafes">Cafés</a>
+                            <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
+                            <a href="cardapio.html#cafes-gelados">Cafés Gelados</a>
+                            <a href="cardapio.html#chocolates-quentes">Chocolates Quentes</a>
+                            <a href="cardapio.html#cappuccinos">Cappuccinos</a>
+                            <a href="cardapio.html#bebidas">Bebidas</a>
+                            <a href="cardapio.html#salgados">Salgados</a>
+                            <a href="cardapio.html#sanduiches">Sanduiches</a>
+                            <a href="cardapio.html#comidas-tipicas">Comidas Típicas e Fitness</a>
+                            <a href="cardapio.html#sobremesas">Sobremesas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!--ADICIONANDO BOTÃO PARA O MENU MOBILE-->
+            <button type="button" class="botao-menu-mobile">&#9776;</button>
+        </nav>
+
+        <div class="menu-mobile"> <!--INICIANDO O MENU MOBILE-->
             <div class="nav-list">
                 <ul>
                     <li class="nav-item">
@@ -41,12 +74,31 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
     </header>
 
     <main>
         <div class="conteudo">
-            <form action="post" id="formulario"></form>
+            <div class="formulario">
+                <h2>Formulário para Contato</h2>
+                <div class="box-formulario">
+                    <form method="post" action="mailto:" id="formulario">
+                        <label for="email">
+                            Email: <input class="required" id="email" size="25" name="email" autocomplete="email" oninput="validarEmail()"/>
+                            <span class="span-required">O email precisa ser válido</span>
+                        </label>
+                        <label for="nome">
+                            Nome: <input class="required" id="nome" type="text" size="25" name="name" autocomplete="name" oninput="validarNome()"/>
+                            <span class="span-required">O nome precisa ter no mínimo 3 caracteres</span>
+                        </label>
+                        <label for="mensagem">
+                            Mensagem:<textarea name="mensagem" id="mensagem" cols="40" rows="5" placeholder="Digite aqui a mensagem."></textarea>
+                        </label>
+                        <input class="botao-formulario" type="submit" value="Enviar">
+                        <input class="botao-formulario" type="reset" value="Limpar">
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -60,7 +112,7 @@
             </div>
 
             <div class="contato">
-                <h3><a href="contato.html#formulario" style="text-decoration: underline;">Contato:</a></h3>
+                <h3><a href="contato.html#formulario">Contato:</a></h3>
                 <ul>
                     <li>Telefone: (81) 99607-2562</li>
                     <li>Email: casinhabrancacafeteria@gmail.com</li>
