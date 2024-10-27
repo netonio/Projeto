@@ -28,6 +28,12 @@ header{
     text-align: center;
 }
 
+.logo{
+    margin-right: 11px;
+    padding-top: 5px;
+    height: 150px;
+}
+
 /* Estilizando o botão para mudar o tema */
 .tema{ 
     height: 10px;
@@ -44,12 +50,6 @@ header{
     font-size: 1.6rem;
     transition:font-size 1s; /*Transição para o aumento da fonte*/
     cursor: pointer;
-}
-
-.logo{
-    margin:0;
-    padding-top: 5px;
-    height: 150px;
 }
 
 /* Estilizando o menu de navegação em desktop */
@@ -98,9 +98,8 @@ header{
 }
 
 .dropdown-menu{
-    width: 900px; /* exemplo de largura fixa */
-    left: 50%; 
-    margin-left: -450px; /* Centraliza o menu */
+    width: 900px;
+    margin-left: -400px; /* Centraliza o menu */
     margin-top: 8px;
     display: none;
     position: absolute;
@@ -108,20 +107,26 @@ header{
     border: solid 1px black;
     background-color: var(--cor-principal);
     color: var(--cor-terciaria);
-
 }
 
 .dropdown-menu a {
     color: var(--cor-terciaria);
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: auto;
+    flex: 0 0 48%;
 }
 
 .dropdown-menu a:hover {
     font-size: 1.4rem;
     transition: 0.5s;
+}
+
+.show{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
 }
 
 .botao-dropdown{
@@ -133,7 +138,15 @@ header{
     cursor: pointer;
 }
 
-.show{
+.botao-menu-mobile{
+    display: none;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.menu-mobile.abrir-menu{
     display: block;
 }
 
@@ -198,6 +211,12 @@ hr{
     flex-wrap: wrap; /* Permite que as figuras se movam para a linha seguinte */
     justify-content: space-between; /* Distribui o espaço entre as figuras */
     margin: 30px; /* Espaçamento entre as imagens */
+}
+
+.produto {
+    flex: 1 1 calc(25% - 10px); /* Ajusta a largura para 25% menos a margem */
+    max-width: 150px; /* Define uma largura máxima para cada produto */
+    text-align: center; /* Centraliza o texto */
 }
 
 figure {
@@ -328,6 +347,59 @@ figcaption {
     background-color: #FFF; /*Muda o fundo do botão*/
 }
 
+/*Estilizando o formulario*/
+.formulario{
+    display: flex;
+    flex-direction: column; /*Organiza os itens verticalmente, de cima para baixo.*/
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario h2{
+    margin: 80px;
+    margin-bottom: -70px;
+    font-weight: 500;
+}
+
+/*Estilizando o caixa formulario*/
+.box-formulario{
+    width: 50%; 
+    min-height: 100px;
+    margin: 80px 0px;
+    padding: 20px;
+    border: 3px solid var(--cor-principal);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /*Organiza os itens verticalmente, de cima para baixo.*/
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--cor-fonte);
+}
+
+.box-formulario input, textarea{
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 2px solid var(--cor-principal);
+    border-radius: 10px;
+    width: 100%;
+    margin: 3px 0;
+    font-size: 1rem;
+    resize: none; /*Não permite que o usuário redimensione a área de texto*/
+}
+
+.span-required{
+    color: red;
+    display: none;
+    font-size: 1rem;
+}
+
+.botao-formulario{
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    width: 100%;
+    cursor: pointer;
+}
+
 /* Estilizando o rodapé da página */
 footer{
     display: flex; /* Os itens ficarão alinhados desde que  */
@@ -394,7 +466,7 @@ footer h3{
 
     .dropdown-menu{
         width: 620px; /* exemplo de largura fixa */
-        margin-left: -305px; /* Centraliza o menu */
+        margin-left: -255px; /* Centraliza o menu */
     }
 
     .carrossel{
@@ -446,13 +518,93 @@ footer h3{
 }
 
 @media screen and (max-width:800px){
-    
-    *{
-        overflow-x: hidden;
-    }
 
     .menu-desktop{
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item{
         display: none;
+    }
+
+    .show{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3px 5px;
+    }
+
+    .tema{
+        margin-top: -15px;
+        margin-left: -50px;
+    }
+
+    .botao-menu-mobile{
+        display: block;
+        border: none;
+        background-color: var(--cor-principal);
+        color: var(--cor-terciaria);
+        cursor: pointer;
+        font-size: 1.5rem;
+        margin-top: -10px;
+        margin-right: -45px;
+    }
+
+    .menu-mobile{
+        background-color: var(--cor-principal);
+        color: var(--cor-terciaria);
+        position: absolute; /* Permite que o menu seja posicionado em relação ao seu container */
+        width: 100%; /* Ocupa a largura total do container */
+        top: 215px; /* Ajuste este valor conforme necessário para descer o menu */
+        left: 0; /* Garante que o menu comece na borda esquerda */
+        z-index: 1; /* Garante que o menu fique acima de outros elementos */
+    }
+
+    .menu-mobile ul{
+        width: 100%;
+        background-color: var(--cor-principal);
+        margin: 0px 10px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+        align-items: center;
+    }
+
+    .menu-mobile .nav-item{
+        display: flex;
+        margin: 0px 10px;
+    }
+    
+    .nav-link{
+        text-decoration: none;
+        color: var(--cor-terciaria);
+        font-weight: 400;
+        font-size: 1.1rem;
+        padding: 10px 15px; /* Adiciona espaçamento interno para os links */
+    }
+    
+    .nav-link:hover{
+        font-size: 1.3rem;
+        transition: 0.5s;
+    }
+
+    .dropdown-menu {
+        width: 483.5px; /* Largura ajustada para caber em telas pequenas */
+        margin-left: -178%; /* Centraliza o menu na tela */
+        margin-top: 43%; /* Faz o menu ficar abaixo de cardápio */
+    }
+
+    .botao-dropdown{
+        margin-left: -9px;
+    }
+
+    .dropdown-menu a{
+        font-size: 1rem;
+    }
+
+    .dropdown-menu a:hover {
+        font-size: 1.2rem;
+        transition: 0.5s;
     }
 
     .carrossel{
@@ -492,6 +644,15 @@ footer h3{
     #mapa{
         width: 90%;
         height: 200px;
+    }
+
+    .box-formulario{
+        width: 70%;
+    }
+
+    .formulario h2{
+        margin: 30px;
+        margin-bottom: -70px;
     }
 
     footer a img{
