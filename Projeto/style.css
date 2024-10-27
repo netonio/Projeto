@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: "Arima", sans-serif; /*Fontes que serão utilizadas*/
+    scroll-behavior: smooth; /* Adiciona uma rolagem suave */
 }
 
 /* Definindo cores principais da paleta para fácil manutenção */
@@ -29,8 +30,10 @@ header{
 
 /* Estilizando o botão para mudar o tema */
 .tema{ 
-    padding: 4px;
-    margin: 8px;
+    height: 10px;
+    padding: 5px;
+    padding-top: 10px;
+    margin: 2px;
     border: none;
     background-color: var(--cor-principal);
     color: var(--cor-terciaria);
@@ -57,6 +60,7 @@ header{
 }
 
 .nav-list{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center; /*Centraliza os itens*/
@@ -73,7 +77,7 @@ header{
 }
 
 .nav-item{
-    margin: 0 100px;
+    margin: 0 100px; /**Distância entre os itens*/
 }
 
 .nav-link{
@@ -88,8 +92,54 @@ header{
     transition: 0.5s;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu{
+    width: 900px; /* exemplo de largura fixa */
+    left: 50%; 
+    margin-left: -450px; /* Centraliza o menu */
+    margin-top: 8px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    border: solid 1px black;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+
+}
+
+.dropdown-menu a {
+    color: var(--cor-terciaria);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-menu a:hover {
+    font-size: 1.4rem;
+    transition: 0.5s;
+}
+
+.botao-dropdown{
+    border: none;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.show{
+    display: block;
+}
+
 .conteudo{
-    min-height: 100vh; /*Comprimento min.*/
+    width: 100%;
+    min-height: 80vh; /*Comprimento min.*/
     font-weight: 400;
     border: 1px solid var(--cor-secundaria);
     background-color: var(--cor-secundaria);
@@ -97,13 +147,23 @@ header{
     padding: 20px; /*Espaçamento*/
 }
 
+/*Estilizando a área do mapa*/
 .local{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: 50px;
+}
+
+.local h2{
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
 #mapa{
+    border: 2px solid var(--cor-principal);
     width: 50%; /* O mapa ocupa 50% da tela */
     height: 300px;
 }
@@ -114,7 +174,7 @@ header{
 }
 
 .container{
-    width: 18%; /* Ocupa apenas 18% da tela */
+    width: 20%; /* Ocupa apenas 18% da tela */
     padding-top: 3px;
     padding-left: 10px;
     margin: 0; /* Gruda com o hr */
@@ -283,7 +343,7 @@ footer{
 
 footer a img{
     max-width: 50px;
-    border-style:ridge; /* Estiliza a borda da imagem */
+    border-style: ridge; /* Estiliza a borda da imagem */
     border-radius: 15px; /* Deixa a imagem redonda */
     border-color: var(--cor-secundaria);
 }
@@ -308,6 +368,7 @@ footer h3{
 
 .redes-sociais{
     display: flex;
+    margin: 0;
 }
 
 .redes-sociais ul {
@@ -318,9 +379,10 @@ footer h3{
 }
 
 .redes-sociais ul a{
-    display: block;
+    display: inline-block;
     padding-top: 20px;
-    padding-left: 15px;
+    padding-left: 0px;
+    margin-right: calc(10% + 25px);
 }
 
 /* Ajustes para diferentes tamanhos de tela */
@@ -328,6 +390,11 @@ footer h3{
 
     .nav-item{
         margin: 0 70px;
+    }
+
+    .dropdown-menu{
+        width: 620px; /* exemplo de largura fixa */
+        margin-left: -305px; /* Centraliza o menu */
     }
 
     .carrossel{
@@ -338,6 +405,14 @@ footer h3{
     .carrossel img{
         width: 100%;
         height: 100%;
+    }
+
+    .navegacao-manual{
+        width: 600px;
+    }
+
+    .auto-navegacao{
+        width: 600px;
     }
 
     .container{
@@ -357,6 +432,11 @@ footer h3{
 
     figure hr{
         width: calc(150% - 15px);
+    }
+
+    #mapa{
+        width: 70%;
+        height: 300px;
     }
 
     footer a img{
@@ -382,7 +462,17 @@ footer h3{
 
     .carrossel img{
         width: 100%;
-        height: 100%;
+        height: auto;
+    }
+
+    .navegacao-manual{
+        width: 400px;
+        margin-top: -220px;
+    }
+
+    .auto-navegacao{
+        width: 400px;
+        margin-top: 180px;
     }
 
     figure {
@@ -399,9 +489,14 @@ footer h3{
         width: calc(150% - 15px);
     }
 
+    #mapa{
+        width: 90%;
+        height: 200px;
+    }
+
     footer a img{
         max-width: 35px;
-        border-style:ridge; 
+        border-style: ridge; 
         border-radius: 10px; /* Deixa a imagem redonda */
         border-color: var(--cor-secundaria);
     }
@@ -414,7 +509,7 @@ footer h3{
     .redes-sociais ul a{
         display: inline-block;
         padding-top: 20px;
-        padding: 0;
+        padding-left: 0;
         margin-right: calc(10% + 25px);
     }
 }
