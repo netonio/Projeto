@@ -17,23 +17,45 @@
             <button onclick="mudarTema()" type="button" class="tema">&#9728;</button>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
-                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="cardapio.html" class="nav-link">Cardápio</a>
+                        <button class="botao-dropdown">&Downarrow;</button>
+                        <div class="dropdown-menu">
+                            <a href="cardapio.html#cafes">Cafés</a>
+                            <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
+                            <a href="cardapio.html#cafes-gelados">Cafés Gelados</a>
+                            <a href="cardapio.html#chocolates-quentes">Chocolates Quentes</a>
+                            <a href="cardapio.html#cappuccinos">Cappuccinos</a>
+                            <a href="cardapio.html#bebidas">Bebidas</a>
+                            <a href="cardapio.html#salgados">Salgados</a>
+                            <a href="cardapio.html#sanduiches">Sanduiches</a>
+                            <a href="cardapio.html#comidas-tipicas">Comidas Típicas e Fitness</a>
+                            <a href="cardapio.html#sobremesas">Sobremesas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
+    
+    <main>
+        <div class="conteudo">
 
-    <div class="conteudo">
+            <section class="local">
+                <h2>Localização</h2>
+                <div id="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.70941445991!2d-35.95102160323663!3d-8.295502863559596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98a56da17a4b1%3A0x88b2099670852257!2sCaruaru%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1729795456458!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
-        <section class="local">
-            <div id="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.70941445991!2d-35.95102160323663!3d-8.295502863559596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98a56da17a4b1%3A0x88b2099670852257!2sCaruaru%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1729795456458!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-        </section>
-    </div>
+            </section>
+        </div>
+    </main>
 
     <footer> <!--DEFININDO O RODAPÉ-->
 
@@ -41,11 +63,11 @@
             <div class="endereco">
                 <h3>Endereço:</h3>
                 <p>Av. Adjar da Silva Casé, 800 - Indianópolis, Caruaru - PE, 55024-740</p>
-                <a href="sobre.html#mapa" style="text-decoration: underline;">Google Maps</a>
+                <a href="#mapa" style="text-decoration: underline;">Google Maps</a>
             </div>
 
             <div class="contato">
-                <h3><a href="sobre.html#formulario">Contato:</a></h3>
+                <h3><a href="contato.html#formulario" style="text-decoration: underline;">Contato:</a></h3>
                 <ul>
                     <li>Telefone: (81) 99607-2562</li>
                     <li>Email: casinhabrancacafeteria@gmail.com</li>
