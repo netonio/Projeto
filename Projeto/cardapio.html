@@ -12,9 +12,42 @@
     <header> <!--DEFININDO A FACHADA-->
         <img class="logo" src="Imagens/logo1.png" alt="Logo Casinha Branca">
         
-        <!--BARRA DE NAVEGAÇÃO-->
+        <!--BARRA DE NAVEGAÇÃO PARA DESKTOP-->
         <nav class="menu-desktop">
             <button onclick="mudarTema()" type="button" class="tema">&#9728;</button>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="cardapio.html" class="nav-link">Cardápio</a>
+                        <button class="botao-dropdown">&Downarrow;</button> <!--BOTÃO PARA O MENU DROPDOWN-->
+
+                        <div class="dropdown-menu"> <!--LINKANDO AS SESSÕES-->
+                            <a href="cardapio.html#cafes">Cafés</a>
+                            <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
+                            <a href="cardapio.html#cafes-gelados">Cafés Gelados</a>
+                            <a href="cardapio.html#chocolates-quentes">Chocolates Quentes</a>
+                            <a href="cardapio.html#cappuccinos">Cappuccinos</a>
+                            <a href="cardapio.html#bebidas">Bebidas</a>
+                            <a href="cardapio.html#salgados">Salgados</a>
+                            <a href="cardapio.html#sanduiches">Sanduiches</a>
+                            <a href="cardapio.html#comidas-tipicas">Comidas Típicas e Fitness</a>
+                            <a href="cardapio.html#sobremesas">Sobremesas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!--ADICIONANDO BOTÃO PARA O MENU MOBILE-->
+            <button type="button" class="botao-menu-mobile">&#9776;</button>
+        </nav>
+
+        <div class="menu-mobile"> <!--INICIANDO O MENU MOBILE-->
             <div class="nav-list">
                 <ul>
                     <li class="nav-item">
@@ -41,7 +74,7 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
     </header>
 
     <main>
