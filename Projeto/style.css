@@ -163,7 +163,45 @@ header{
     color: var(--cor-fonte);
     padding: 20px; /*Espaçamento*/
 }
+/*estilizando a search bar*/
+#search-bar{
+    display: flex;
+    justify-content: center;
+}
 
+.input-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFF;
+    border: 1px solid var(--cor-principal);
+    padding: 8px 16px 8px 8px;
+    border-radius: 24px;
+    gap: 8px;
+    width: 50%;
+    margin: 10px;
+}
+
+.input-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.input-field{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.input-field:focus{
+    outline: none;
+}
+
+.item{
+    list-style: none;
+}
 /*Estilizando a área do mapa*/
 .local{
     display: flex;
