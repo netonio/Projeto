@@ -181,19 +181,39 @@ document.addEventListener('DOMContentLoaded', function () {
         searchinput.addEventListener('input', (event) => {
             const value = formatString(event.target.value);
 
-            // Selecionando todos os itens da lista
-            const itens = document.querySelectorAll('.items .item');
+            // Selecionando todas as seções que contêm a classe .container e .image-container
+            const sections = document.querySelectorAll('section'); // Seleciona todas as seções da página
 
-            itens.forEach(item => {
-                // Exibindo ou ocultando o item com base na pesquisa
-                if (formatString(item.textContent).includes(value)) {
-                    item.style.display = 'flex';
-                    // Caso o item precise ter uma direção de flex coluna
-                    item.style.flexDirection = 'column';
+            sections.forEach(section => {
+                const container = section.querySelector('.container');  // O título da seção
+                const imageContainer = section.querySelector('.image-container');  // A área das imagens
 
+                // Selecionando todas as figuras dentro de .image-container
+                const figures = imageContainer ? imageContainer.querySelectorAll('figure') : [];
+
+                let hasVisibleItem = false;  // Flag para verificar se ao menos um item é visível
+
+                // Iterando sobre todas as figuras da seção
+                figures.forEach(figure => {
+                    const caption = figure.querySelector('figcaption'); // Pega o <figcaption> (legenda do item)
+                    const captionText = caption ? caption.textContent || caption.innerText : ''; // Obtém o texto da legenda
+
+                    // Exibindo ou ocultando a figura com base no texto da pesquisa
+                    if (formatString(captionText).includes(value)) {
+                        figure.style.display = 'flex';  // Exibe a figura com o layout flex
+                        hasVisibleItem = true;  // Ao menos um item é visível
+                    } else {
+                        figure.style.display = 'none';  // Oculta a figura e remove do layout
+                    }
+                });
+
+                // Ocultando ou exibindo o título da seção (container) dependendo da visibilidade dos itens
+                if (hasVisibleItem) {
+                    container.style.display = 'block';  // Exibe a caixa do título
+                    section.style.display = 'block';  // Exibe a seção inteira
                 } else {
-                    item.style.display = 'none';
-
+                    container.style.display = 'none';  // Oculta a caixa do título
+                    section.style.display = 'none';  // Oculta a seção inteira
                 }
             });
         });
