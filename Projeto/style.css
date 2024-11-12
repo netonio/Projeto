@@ -228,7 +228,7 @@ header{
 }
 
 .container{
-    width: 20%; /* Ocupa apenas 18% da tela */
+    width: 25%; /* Ocupa apenas 25% da tela */
     padding-top: 3px;
     padding-left: 10px;
     margin: 0; /* Gruda com o hr */
