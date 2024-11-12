@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casinha Branca</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="style.css">
     <!--MUDANDO O FAVICON:-->
     <link rel="shortcut icon" href="Imagens/iconecb.ico" type="image/x-icon">
 </head>
-
 <body>
     <header> <!--DEFININDO A FACHADA-->
         <img class="logo" src="Imagens/logo1.png" alt="Logo Casinha Branca">
-
+        
         <!--BARRA DE NAVEGAÇÃO PARA DESKTOP-->
         <nav class="menu-desktop">
             <button onclick="mudarTema()" type="button" class="tema">&#9728;</button>
@@ -47,7 +45,7 @@
                     </li>
                 </ul>
             </div>
-
+            
             <!--ADICIONANDO BOTÃO PARA O MENU MOBILE-->
             <button type="button" class="botao-menu-mobile">&#9776;</button>
         </nav>
@@ -60,7 +58,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a href="cardapio.html" class="nav-link">Cardápio</a>
-                        <button class="botao-dropdown">&Downarrow;</button>
+                        <button class="botao-dropdown">&blacktriangledown;</button>
                         <div class="dropdown-menu">
                             <a href="cardapio.html#cafes">Cafés</a>
                             <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
@@ -94,1006 +92,862 @@
                     <input id="search" type="text" class="input-field" placeholder="O que você gostaria hoje?">
                 </div>
             </div>
-            <ul class="items">
-                    <section id="cafes">
-                        <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                            <h2>Cafés</h2>
-                        </div>
-                        <hr>
-                        <!--CRIANDO A CAIXA COM IMAGENS:-->
-                        <div class="image-container">
-                <li class="item">
+
+            <section id="cafes">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Cafés</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
                     <figure>
                         <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Expresso
-                            <hr>
+                        <figcaption>Expresso <hr>
                             <p>Xícara de café expresso</p>
-                            <label for="checkbox"><input type="checkbox" name="cafe" value="expresso">60 ml -
-                                R$8,00</label> <br>
-                            <label for="checkbox"><input type="checkbox" name="cafe" value="expresso">120 ml -
-                                R$14,00</label>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Expresso Descafeinado
-                            <hr>
+                        <figcaption>Expresso Descafeinado <hr>
                             <p>Xícara de café expresso sem cafeína</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Expresso com Canela
-                            <hr>
+                        <figcaption>Expresso com Canela <hr>
                             <p>Xícara de café com canela</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Expresso com Chantilly
-                            <hr>
+                        <figcaption>Expresso com Chantilly <hr>
                             <p>Xícara de café com chantilly</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Expresso Machiatto
-                            <hr>
+                        <figcaption>Expresso Machiatto <hr>
                             <p>Xícara de café com leite</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Expresso Machiatto Descafeinado
-                            <hr>
+                        <figcaption>Expresso Machiatto Descafeinado <hr>
                             <p>Xícara de café com leite sem cafeína</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Expresso Machiatto com Chantilly
-                            <hr>
+                        <figcaption>Expresso Machiatto com Chantilly <hr>
                             <p>Xícara de café com leite e chantilly</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Expresso Machiatto com Canela
-                            <hr>
+                        <figcaption>Expresso Machiatto com Canela <hr>
                             <p>Xícara de café com leite e canela</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Cafés em Capsulas
-                            <hr>
+                        <figcaption>Cafés em Capsulas <hr>
                             <p>Cápsulas 3 corações</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Café Coado
-                            <hr>
+                        <figcaption>Café Coado <hr>
                             <p>Xícara de café</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Chá quente cápsulas
-                            <hr>
+                        <figcaption>Chá quente cápsulas <hr>
                             <p>Xícara de chá</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Chá quente (infusor)
-                            <hr>
+                        <figcaption>Chá quente (infusor) <hr>
                             <p>xícara de chá feito com infusor</p>
                         </figcaption>
                     </figure>
-                </li>
-        </div>
-        </section>
+                </div>
+            </section>
 
-        <section id="cafes-especiais">
-            <div class="container">
-                <h2>Cafés Especiais</h2>
-            </div>
-            <hr>
-            <!-- Usando uma lista não ordenada para os itens -->
-            <ul class="image-container">
-                <li class="item">
+            <section id="cafes-especiais">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Cafés Especiais</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
                     <figure>
                         <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                        <figcaption>Expressos Aromatizados
-                            <hr>
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Expressos Aromatizados <hr>
                             <p>Xícara de café aromatizada</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                        <figcaption>Café com Leite Condensado
-                            <hr>
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Café com Leite Condensado <hr>
                             <p>Xícara de café com leite condensado</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                        <figcaption>Mocha
-                            <hr>
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Mocha <hr>
                             <p>Xícara de café com chocolate</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                        <figcaption>Mocha com Chantilly
-                            <hr>
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Mocha com Chantilly <hr>
                             <p>Xícara de café com chocolate e chantilly</p>
                         </figcaption>
                     </figure>
-                </li>
-                <li class="item">
                     <figure>
                         <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                        <figcaption>Mocha Avelã OU Menta
-                            <hr>
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Mocha Avelã OU Menta <hr>
                             <p>Xícara de café com chocolate e avelã OU menta</p>
                         </figcaption>
                     </figure>
-                </li>
-            </ul>
-        </section>
+                </div>
+            </section>
 
-
-        <section id="cafes-gelados">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Cafés Gelados</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Shake de Café
-                        <hr>
+            <section id="cafes-gelados">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Cafés Gelados</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Shake de Café <hr>
                         <p>Bebida batida de café</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino Gelado
-                        <hr>
-                        <p>Xícara de café batido com leite e avelã OU nutella</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Shake de Chocolate
-                        <hr>
-                        <p>Bebida batida de café</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Frappé de Morango com Chocolate
-                        <hr>
-                        <p>Bebida de café, misturado com leite, açucar, gelo, morango e chocolate</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Frappé de Açaí com Café
-                        <hr>
-                        <p>Bebida de café, misturado com leite, açucar, gelo e açaí</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Soda Italiana
-                        <hr>
-                        <p>Bebida com xarope de frutas, água gaseificada e gelo</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino Gelado <hr>
+                            <p>Xícara de café batido com leite e avelã OU nutella</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Shake de Chocolate <hr>
+                            <p>Bebida batida de café</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Frappé de Morango com Chocolate <hr>
+                            <p>Bebida de café, misturado com leite, açucar, gelo, morango e chocolate</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Frappé de Açaí com Café <hr>
+                            <p>Bebida de café, misturado com leite, açucar, gelo e açaí</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Soda Italiana <hr>
+                            <p>Bebida com xarope de frutas, água gaseificada e gelo</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section id="chocolates-quentes">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Chocolates Quentes</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Chocolate Quente Tradicional
-                        <hr>
-                        <p>Bebida de chocolate e leite quente</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Chocolate Quente com Chantilly
-                        <hr>
-                        <p>Bebida de chocolate e leite quente com chantilly</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Chocolate Quente com Morango
-                        <hr>
-                        <p>Bebida de chocolate e leite quente com morango</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+            <section id="chocolates-quentes">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Chocolates Quentes</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Chocolate Quente Tradicional <hr>
+                            <p>Bebida de chocolate e leite quente</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Chocolate Quente com Chantilly <hr>
+                            <p>Bebida de chocolate e leite quente com chantilly</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Chocolate Quente com Morango <hr>
+                            <p>Bebida de chocolate e leite quente com morango</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section id="cappuccinos">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Cappuccinos</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino Italiano
-                        <hr>
-                        <p>Xícara de café batido com leite, com espuma de leite</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino Tradicional com Chantilly
-                        <hr>
-                        <p>Xícara de café batido com leite, com Chantilly</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino 3 Corações
-                        <hr>
-                        <p>Xícara de café (Três Corações) batido com leite</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino 3 Corações com Chantilly
-                        <hr>
-                        <p>Xícara de café (Três Corações) batido com leite, com Chantilly</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino Diet
-                        <hr>
-                        <p>Xícara de café batido com leite, zero açúcar</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino Descafeinado
-                        <hr>
-                        <p>Xícara de café batido com leite, 0 cafeína</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino com Ovomaltine
-                        <hr>
-                        <p>Xícara de café batido com leite e ovomaltine</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino com Avelã
-                        <hr>
-                        <p>Xícara de café batido com leite e avelã</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cappuccino com Doce de Leite
-                        <hr>
-                        <p>Xícara de café batido com leite e doce de leite</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+            <section id="cappuccinos">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Cappuccinos</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino Italiano<hr>
+                            <p>Xícara de café batido com leite, com espuma de leite</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino Tradicional com Chantilly<hr>
+                            <p>Xícara de café batido com leite, com Chantilly</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino 3 Corações<hr>
+                            <p>Xícara de café (Três Corações) batido com leite</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino 3 Corações com Chantilly<hr>
+                            <p>Xícara de café (Três Corações) batido com leite, com Chantilly</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino Diet<hr>
+                            <p>Xícara de café batido com leite, zero açúcar</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino Descafeinado<hr>
+                            <p>Xícara de café batido com leite, 0 cafeína</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino com Ovomaltine<hr>
+                            <p>Xícara de café batido com leite e ovomaltine</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino com Avelã<hr>
+                            <p>Xícara de café batido com leite e avelã</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino com Doce de Leite<hr>
+                            <p>Xícara de café batido com leite e doce de leite</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section id="bebidas">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Bebidas</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Água Mineral sem Gás
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Água Mineral com Gás
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Suco Del Valle
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Refrigerante em Lata
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Refrigerante
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>H2O
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Chá Gelado Leão
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Chá Gelado - Infusor
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Chá Gelado Especial
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Suco de Laranja
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Suco de Polpa com Leite
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Suplemento Alimentar
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Energético
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Licor
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Vinho do Porto
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+            <section id="bebidas">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Bebidas</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Água Mineral sem Gás<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Água Mineral com Gás<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Suco Del Valle<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Refrigerante em Lata<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Refrigerante<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>H2O<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Chá Gelado Leão<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Chá Gelado - Infusor<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Chá Gelado Especial<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Suco de Laranja<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Suco de Polpa com Leite<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Suplemento Alimentar<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Energético<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Licor<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Vinho do Porto<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section id="salgados">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Salgados</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Croissant
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Folhado
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Croissant Gourmet
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pão de Batata
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Mini Croissant
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Coxinha de Frango
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Coxinha de Frango e Requeijão
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Coxinha de Charque
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Coxinha de Camarão
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Empada
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pastel de Forno
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pão de Queijo
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Quiches
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+            <section id="salgados">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Salgados</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Croissant<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Folhado<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Croissant Gourmet<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pão de Batata<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Mini Croissant<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Coxinha de Frango<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Coxinha de Frango e Requeijão<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Coxinha de Charque<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Coxinha de Camarão<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Empada<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pastel de Forno<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pão de Queijo<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Quiches<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section id="sanduiches">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Sanduíches</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Sanduíche de Queijo OU Misto
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Americano
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Sanduíche de Peito de Peru e Cream Cheese
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pão na Chapa
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pão na Chapa com Requeijão
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pão de Queijo com Cream Cheese
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pão de Queijo com Peito de Peru e Cream Cheese
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pão de Queijo Doce
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Sanduíche de Mortadela "Ouro"
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Sanduíche de Frango
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Sanduíche de Atum
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+            <section id="sanduiches">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Sanduíches</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Sanduíche de Queijo OU Misto<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Americano<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Sanduíche de Peito de Peru e Cream Cheese<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pão na Chapa<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pão na Chapa com Requeijão<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pão de Queijo com Cream Cheese<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pão de Queijo com Peito de Peru e Cream Cheese<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pão de Queijo Doce<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Sanduíche de Mortadela "Ouro"<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Sanduíche de Frango<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Sanduíche de Atum<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section id="comidas-tipicas">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Comidas Típicas e Fitness</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cuscuz Amanteigado
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cuscuz Recheado Charque
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cuscuz Recheado Frango
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cuscuz com Queijo Coalho
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cuscuz Frango com Queijo
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pamonha
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pamonha com Queijo
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Omelete de Queijo
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Omelete de Frango
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Omelete de Charque
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Crepioca de Queijo
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Crepioca de Frango
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Crepioca de Charque
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Tapioca de Queijo Coalho
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Tapioca de Frango
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Tapioca de Frango com Queijo
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Tapioca de Coco com Leite Condensado
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Tapioca de Charque
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Ovos Mexidos
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Fatia de Queijo Coalho
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Leite
-                        <hr>
-                        <p></p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
+            <section id="comidas-tipicas">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Comidas Típicas e Fitness</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cuscuz Amanteigado<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cuscuz Recheado Charque<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cuscuz Recheado Frango<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cuscuz com Queijo Coalho<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cuscuz Frango com Queijo <hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pamonha<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pamonha com Queijo<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Omelete de Queijo<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Omelete de Frango<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Omelete de Charque<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Crepioca de Queijo<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Crepioca de Frango<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Crepioca de Charque<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Tapioca de Queijo Coalho<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Tapioca de Frango<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Tapioca de Frango com Queijo<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Tapioca de Coco com Leite Condensado<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Tapioca de Charque<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Ovos Mexidos<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Fatia de Queijo Coalho<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Leite<hr>
+                            <p></p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section id="sobremesas">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Sobremesas</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Bolo Tradicional
-                        <hr>
-                        <p>Fatia de bolo de massa</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Tortas
-                        <hr>
-                        <p>Fatia de torta</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cheesecake
-                        <hr>
-                        <p>Fatia de torta feita à base de biscoito e cream cheese</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Brigadeirão
-                        <hr>
-                        <p>Docinho de brigadeiro</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Queijadinha
-                        <hr>
-                        <p>Docinho de leite condensado, coco e queijo parmesão</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Bolo de Noiva
-                        <hr>
-                        <p>Fatia de bolo de ameixa</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Petit Gateau
-                        <hr>
-                        <p>Bolinho de chocolate</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cartola tradicional
-                        <hr>
-                        <p>Banana frita,manteiga, açúcar e canela</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Cartola Chocolate
-                        <hr>
-                        <p>Banana frita,manteiga, açúcar,canela e chocolate</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Donuts Tradicional
-                        <hr>
-                        <p>Massa açucarada frita com cobertura</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Donuts Especial
-                        <hr>
-                        <p>Massa açucarada frita com cobertura especial</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Salada de Fruta
-                        <hr>
-                        <p>Salada feita com frutas frescas</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Pudim
-                        <hr>
-                        <p>Doce feito de leite condensado e calda de caramelo</p>
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-        </li>
-        </ul>
+            <section id="sobremesas">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Sobremesas</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Bolo Tradicional<hr>
+                            <p>Fatia de bolo de massa</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Tortas<hr>
+                            <p>Fatia de torta</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cheesecake<hr>
+                            <p>Fatia de torta feita à base de biscoito e cream cheese</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Brigadeirão<hr>
+                            <p>Docinho de brigadeiro</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Queijadinha<hr>
+                            <p>Docinho de leite condensado, coco e queijo parmesão</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Bolo de Noiva<hr>
+                            <p>Fatia de bolo de ameixa</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Petit Gateau<hr>
+                            <p>Bolinho de chocolate</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cartola tradicional<hr>
+                            <p>Banana frita,manteiga, açúcar e canela</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cartola Chocolate<hr>
+                            <p>Banana frita,manteiga, açúcar,canela e chocolate</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Donuts Tradicional<hr>
+                            <p>Massa açucarada frita com cobertura</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Donuts Especial<hr>
+                            <p>Massa açucarada frita com cobertura especial</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Salada de Fruta<hr>
+                            <p>Salada feita com frutas frescas</p>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Pudim<hr>
+                            <p>Doce feito de leite condensado e calda de caramelo</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -1117,15 +971,12 @@
 
         <section class="redes-sociais">
             <ul>
-                <li><a href="https://www.instagram.com/casinhabrancacafeteria/" target="_blank"><img
-                            src="Imagens/instagram-icon.jfif" alt="Icone Instagram"></a></li>
-                <li><a href="https://api.whatsapp.com/send/?phone=5581996072562&text&type=phone_number&app_absent=0"
-                        target="_blank"><img src="Imagens/whatsapp-icon.png" alt="Icone Whatsapp"></a></li>
+            <li><a href="https://www.instagram.com/casinhabrancacafeteria/" target="_blank"><img src="Imagens/instagram-icon.jfif" alt="Icone Instagram"></a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=5581996072562&text&type=phone_number&app_absent=0" target="_blank"><img src="Imagens/whatsapp-icon.png" alt="Icone Whatsapp"></a></li>
             </ul>
         </section>
     </footer>
 
     <script src="script.js"></script> <!--LINKANDO O SCRIPT-->
 </body>
-
 </html>
