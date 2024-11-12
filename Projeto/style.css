@@ -269,12 +269,6 @@ figure {
     margin: 10px 18px;
 }
 
-figure:hover{
-    max-width: none;
-    width: 50%;
-    position: relative;
-}
-
 figure hr{
     width: 450px;
     max-width: 85%; /* torna o hr responsivo */
