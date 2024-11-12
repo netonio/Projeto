@@ -163,6 +163,7 @@ header{
     color: var(--cor-fonte);
     padding: 20px; /*Espaçamento*/
 }
+
 /*estilizando a search bar*/
 #search-bar{
     display: flex;
@@ -180,6 +181,7 @@ header{
     gap: 8px;
     width: 50%;
     margin: 10px;
+    margin-bottom: 30px;
 }
 
 .input-icon{
@@ -202,6 +204,7 @@ header{
 .item{
     list-style: none;
 }
+
 /*Estilizando a área do mapa*/
 .local{
     display: flex;
@@ -291,7 +294,7 @@ figcaption p{
 }
 
 figcaption label{
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: 75%;
 }
 
