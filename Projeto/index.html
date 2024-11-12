@@ -12,116 +12,168 @@
     <header> <!--DEFININDO A FACHADA-->
         <img class="logo" src="Imagens/logo1.png" alt="Logo Casinha Branca">
         
-        <!--BARRA DE NAVEGAÇÃO-->
+        <!--BARRA DE NAVEGAÇÃO PARA DESKTOP-->
         <nav class="menu-desktop">
             <button onclick="mudarTema()" type="button" class="tema">&#9728;</button>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
-                    <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="cardapio.html" class="nav-link">Cardápio</a>
+                        <button class="botao-dropdown">&blacktriangledown;</button> <!--BOTÃO PARA O MENU DROPDOWN-->
+
+                        <div class="dropdown-menu"> <!--LINKANDO AS SESSÕES-->
+                            <a href="cardapio.html#cafes">Cafés</a>
+                            <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
+                            <a href="cardapio.html#cafes-gelados">Cafés Gelados</a>
+                            <a href="cardapio.html#chocolates-quentes">Chocolates Quentes</a>
+                            <a href="cardapio.html#cappuccinos">Cappuccinos</a>
+                            <a href="cardapio.html#bebidas">Bebidas</a>
+                            <a href="cardapio.html#salgados">Salgados</a>
+                            <a href="cardapio.html#sanduiches">Sanduiches</a>
+                            <a href="cardapio.html#comidas-tipicas">Comidas Típicas e Fitness</a>
+                            <a href="cardapio.html#sobremesas">Sobremesas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre</a>
+                    </li>
                 </ul>
             </div>
+            
+            <!--ADICIONANDO BOTÃO PARA O MENU MOBILE-->
+            <button type="button" class="botao-menu-mobile">&#9776;</button>
         </nav>
+
+        <div class="menu-mobile"> <!--INICIANDO O MENU MOBILE-->
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="cardapio.html" class="nav-link">Cardápio</a>
+                        <button class="botao-dropdown">&Downarrow;</button>
+                        <div class="dropdown-menu">
+                            <a href="cardapio.html#cafes">Cafés</a>
+                            <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
+                            <a href="cardapio.html#cafes-gelados">Cafés Gelados</a>
+                            <a href="cardapio.html#chocolates-quentes">Chocolates Quentes</a>
+                            <a href="cardapio.html#cappuccinos">Cappuccinos</a>
+                            <a href="cardapio.html#bebidas">Bebidas</a>
+                            <a href="cardapio.html#salgados">Salgados</a>
+                            <a href="cardapio.html#sanduiches">Sanduiches</a>
+                            <a href="cardapio.html#comidas-tipicas">Comidas Típicas e Fitness</a>
+                            <a href="cardapio.html#sobremesas">Sobremesas</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
-    <div class="conteudo"> <!--DEFININDO O CONTEUDO-->
+    <main> <!--DEFININDO O CONTEUDO PRINCIPAL-->
+        <div class="conteudo"> 
 
-        <!--COMEÇANDO O CARROSSEL-->
-        <section class="carrossel">
-            <div class="slides">
+            <!--COMEÇANDO O CARROSSEL-->
+            <section class="carrossel">
+                <div class="slides">
 
-                <!--CRIANDO OS BOTÕES-->
-                <input type="radio" name="radio-button" id="radio1">
-                <input type="radio" name="radio-button" id="radio2">
-                <input type="radio" name="radio-button" id="radio3">
-                <input type="radio" name="radio-button" id="radio4">
-            
-                <!--COLOCANDO AS IMAGENS-->
-                <div class="slide first"> <!--DEFININDO A PRIMERIA IMAGEM-->
-                    <img src="Imagens/cafegrandee1.webp" alt="slide 1">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/cafegrande2.avif" alt="slide 2">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/cafegrande3.jpg" alt="slide 3">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/cafegrandee4.jpg" alt="slide 4">
-                </div>
-                <div class="slide">
-                    <img src="Imagens/casinha.jpeg" alt="slide 5">
+                    <!--CRIANDO OS BOTÕES-->
+                    <input type="radio" name="radio-button" id="radio1" value="1">
+                    <input type="radio" name="radio-button" id="radio2" value="2">
+                    <input type="radio" name="radio-button" id="radio3" value="3">
+                    <input type="radio" name="radio-button" id="radio4" value="4">
+                
+                    <!--COLOCANDO AS IMAGENS-->
+                    <div class="slide first"> <!--DEFININDO A PRIMERIA IMAGEM-->
+                        <img src="Imagens/cafegrandee1.webp" alt="slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="Imagens/cafegrande2.avif" alt="slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="Imagens/cafegrande3.jpg" alt="slide 3">
+                    </div>
+                    <div class="slide">
+                        <img src="Imagens/cafegrandee4.jpg" alt="slide 4">
+                    </div>
+
+                    <!--CRIANDO A NAVEGAÇÃO AUTOMÁTICA-->
+                    <div class="auto-navegacao"> 
+                        <div class="auto-button1"></div>
+                        <div class="auto-button2"></div>
+                        <div class="auto-button3"></div>
+                        <div class="auto-button4"></div>
+                    </div>
                 </div>
 
-                <!--CRIANDO A NAVEGAÇÃO AUTOMÁTICA-->
-                <div class="auto-navegacao"> 
-                    <div class="auto-button1"></div>
-                    <div class="auto-button2"></div>
-                    <div class="auto-button3"></div>
-                    <div class="auto-button4"></div>
+                <!--CRIANDO A NAVEGAÇÃO MANUAL-->
+                <div class="navegacao-manual">
+                    <label for="radio1" class="manual-button"></label>
+                    <label for="radio2" class="manual-button"></label>
+                    <label for="radio3" class="manual-button"></label>
+                    <label for="radio4" class="manual-button"></label>
                 </div>
-            </div>
+            </section>
 
-            <!--CRIANDO A NAVEGAÇÃO MANUAL-->
-            <div class="navegacao-manual">
-                <label for="radio1" class="manual-button"></label>
-                <label for="radio2" class="manual-button"></label>
-                <label for="radio3" class="manual-button"></label>
-                <label for="radio4" class="manual-button"></label>
-            </div>
-        </section>
+            <section class="favoritos">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Favoritos</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container"> 
+                    <figure>
+                        <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Xícara de café <hr><p style="font-size: medium;">expresso</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Xícara de café <hr><p style="font-size: medium;">preto</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Xícara de café <hr><p style="font-size: medium;">com leite</p></figcaption>
+                    </figure>
+                </div>
+            </section>
 
-        <section class="favoritos">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Favoritos</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container"> 
-                <figure>
-                    <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Xícara de café <hr><p style="font-size: medium;">expresso</p></figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Xícara de café <hr><p style="font-size: medium;">preto</p></figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Xícara de café <hr><p style="font-size: medium;">com leite</p></figcaption>
-                </figure>
-            </div>
-        </section>
+            <section class="novidades">
+                <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
+                    <h2>Novidades</h2>
+                </div>
+                <hr>
+                <!--CRIANDO A CAIXA COM IMAGENS:-->
+                <div class="image-container">
+                    <figure>
+                        <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Xícara de café <hr><p style="font-size: medium;">expresso</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Xícara de café <hr><p style="font-size: medium;">preto</p></figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Xícara de café <hr><p style="font-size: medium;">com leite</p></figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </main>
 
-        <section class="novidades">
-            <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
-                <h2>Novidades</h2>
-            </div>
-            <hr>
-            <!--CRIANDO A CAIXA COM IMAGENS:-->
-            <div class="image-container">
-                <figure>
-                    <img src="Imagens/cafe1.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Xícara de café <hr><p style="font-size: medium;">expresso</p></figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe2.JPG" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Xícara de café <hr><p style="font-size: medium;">preto</p></figcaption>
-                </figure>
-                <figure>
-                    <img src="Imagens/cafe3.jpg" alt="cafe" class="produto">
-                    <!--CRIANDO A LEGENDA:-->
-                    <figcaption>Xícara de café <hr><p style="font-size: medium;">com leite</p></figcaption>
-                </figure>
-            </div>
-        </section>
-    </div>
     <footer> <!--DEFININDO O RODAPÉ-->
 
         <section class="informacoes">
@@ -132,7 +184,7 @@
             </div>
 
             <div class="contato">
-                <h3><a href="sobre.html#formulario">Contato:</a></h3>
+                <h3><a href="contato.html#formulario" style="text-decoration: underline;">Contato:</a></h3>
                 <ul>
                     <li>Telefone: (81) 99607-2562</li>
                     <li>Email: casinhabrancacafeteria@gmail.com</li>
