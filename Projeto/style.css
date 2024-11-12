@@ -201,10 +201,6 @@ header{
     outline: none;
 }
 
-.item{
-    list-style: none;
-}
-
 /*Estilizando a área do mapa*/
 .local{
     display: flex;
@@ -260,7 +256,7 @@ hr{
 
 .produto {
     flex: 1 1 calc(25% - 10px); /* Ajusta a largura para 25% menos a margem */
-    max-width: 20%; /* Define uma largura máxima para cada produto */
+    max-width: 25%; /* Define uma largura máxima para cada produto */
     text-align: center; /* Centraliza o texto */
 }
 
@@ -525,6 +521,10 @@ footer h3{
         margin-left: -255px; /* Centraliza o menu */
     }
 
+    .input-group{
+        width: 70%;
+    }
+
     .carrossel{
         width: 600px;
         height: 400px;
@@ -549,7 +549,7 @@ footer h3{
     }
 
     figure {
-        max-width: 50%; /* Calcula a largura de cada figura para caber duas na linha */
+        max-width: 45%; /* Calcula a largura de cada figura para caber duas na linha */
         min-width: 200px;
     }
     
@@ -672,6 +672,10 @@ footer h3{
         transition: 0.5s;
     }
 
+    .input-group{
+        width: 95%;
+    }
+
     .carrossel{
         width: 400px;
         height: 200px;
@@ -699,16 +703,11 @@ footer h3{
     .auto-navegacao div:not(:last-child){
         margin-right: 20px; /*Todos os botões (menos o ultimo, "last child") terão espaçamento na direita*/
     }
-
-    .produto {
-        flex: 1 1 calc(75% - 10px); /* Ajusta a largura para 25% menos a margem */
-        max-width: 30%; /* Define uma largura máxima para cada produto */
-        text-align: center; /* Centraliza o texto */
-    }
     
     figure {
         max-width: 100%; /* Calcula a largura de cada figura para caber duas na linha */
         min-width: 200px;
+        margin-left: -10px;
     }
 
     figure img {
@@ -721,7 +720,7 @@ footer h3{
     }
 
     figcaption {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-left: 10px; /* Distância da legenda até a imagem */
     }
 
