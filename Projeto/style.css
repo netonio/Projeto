@@ -10,6 +10,10 @@
     scroll-behavior: smooth; /* Adiciona uma rolagem suave */
 }
 
+body{
+    overflow-x: hidden;
+}
+
 /* Definindo cores principais da paleta para fácil manutenção */
 :root{
     --cor-principal: rgb(56, 133, 124); /*Cor para fachada e rodapé*/
@@ -215,20 +219,27 @@ hr{
 
 .produto {
     flex: 1 1 calc(25% - 10px); /* Ajusta a largura para 25% menos a margem */
-    max-width: 150px; /* Define uma largura máxima para cada produto */
+    max-width: 20%; /* Define uma largura máxima para cada produto */
     text-align: center; /* Centraliza o texto */
 }
 
 figure {
     display: flex;
     align-items: center; /* Alinha verticalmente imagem e legenda */
-    width: calc(45% - 15px); /* Calcula a largura de cada figura para caber duas na linha */
-    margin-bottom: 20px; /* Espaçamento entre as linhas */
-    margin-left: 5%;
+    max-width: 40%; /* Calcula a largura de cada figura para caber duas na linha */
+    min-width: 350px;
+    margin: 10px 18px;
+}
+
+figure:hover{
+    max-width: none;
+    width: 50%;
+    position: relative;
 }
 
 figure hr{
-    width: calc(250% - 15px); /* torna o hr responsivo */
+    width: 450px;
+    max-width: 85%; /* torna o hr responsivo */
 }
 
 figure img {
@@ -237,9 +248,19 @@ figure img {
 }
 
 figcaption {
-    font-size: larger;
+    font-size: 1.4rem;
     margin-left: 10px; /* Distância da legenda até a imagem */
-    margin-top: -50px;
+    padding-bottom: 10px;
+}
+
+figcaption p{
+    font-size: 1.2rem;
+    max-width: 75%;
+}
+
+figcaption label{
+    font-size: 1.2rem;
+    max-width: 75%;
 }
 
 .carrossel{
@@ -493,19 +514,28 @@ footer h3{
     }
 
     figure {
-        width: calc(45% - 15px); /* Faz com que cada figura ocupe toda a largura */
-        margin-left: 5%;
+        max-width: 50%; /* Calcula a largura de cada figura para caber duas na linha */
+        min-width: 200px;
     }
     
     figure img {
-        max-width: 30%; /* Tamanho da imagem */
+        max-width: 40%; /* Tamanho da imagem */
         height: auto;
     }
 
     figure hr{
-        width: calc(150% - 15px);
+        max-width: 55%;
     }
 
+    figcaption {
+        font-size: 1rem;
+    }
+
+    figcaption p{
+        font-size: 1rem;
+        max-width: 60%;
+    }
+    
     #mapa{
         width: 70%;
         height: 300px;
@@ -622,14 +652,28 @@ footer h3{
         margin-top: -220px;
     }
 
+    .manual-button:not(:last-child){
+        margin-right: 20px; /*Todos os botões (menos o ultimo, "last child") terão espaçamento na direita*/
+    }
+
     .auto-navegacao{
         width: 400px;
         margin-top: 180px;
     }
 
+    .auto-navegacao div:not(:last-child){
+        margin-right: 20px; /*Todos os botões (menos o ultimo, "last child") terão espaçamento na direita*/
+    }
+
+    .produto {
+        flex: 1 1 calc(75% - 10px); /* Ajusta a largura para 25% menos a margem */
+        max-width: 30%; /* Define uma largura máxima para cada produto */
+        text-align: center; /* Centraliza o texto */
+    }
+    
     figure {
-        width: calc(95% - 15px); /* Faz com que cada figura ocupe toda a largura */
-        margin-left: 5%;
+        max-width: 100%; /* Calcula a largura de cada figura para caber duas na linha */
+        min-width: 200px;
     }
 
     figure img {
@@ -638,9 +682,18 @@ footer h3{
     }
 
     figure hr{
-        width: calc(150% - 15px);
+        max-width: 65%;
     }
 
+    figcaption {
+        font-size: 1.2rem;
+        margin-left: 10px; /* Distância da legenda até a imagem */
+    }
+
+    figcaption p{
+        font-size: 1rem;
+    }
+    
     #mapa{
         width: 90%;
         height: 200px;
@@ -665,12 +718,13 @@ footer h3{
     .redes-sociais ul {
         display: flex;
         margin: 0;
+        padding-left: 10px;
     }
 
     .redes-sociais ul a{
         display: inline-block;
         padding-top: 20px;
         padding-left: 0;
-        margin-right: calc(10% + 25px);
+        margin-right: calc(10% + 15px);
     }
 }
