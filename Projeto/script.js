@@ -46,9 +46,9 @@ if (window.location.pathname.endsWith('index.html')) { //O código abaixo só ac
 //GARANTE QUE OS ELEMENTOS ESTEJAM DISPONÍVEIS PARA USO
 document.addEventListener("DOMContentLoaded", function () {
     const root = document.documentElement;
-    const tema = localStorage.getItem('tema')
+    const tema = localStorage.getItem('tema') // Pega o item "tema" do local storage do usuário
 
-    if (tema === 'escuro') {
+    if (tema === 'escuro') { // Faz a comparação de temas
         root.style.setProperty('--cor-principal', 'rgb(77, 54, 35)');
         root.style.setProperty('--cor-secundaria', 'rgb(195, 195, 140)');
         root.style.setProperty('--cor-fonte', 'rgb(77, 54, 35)');
