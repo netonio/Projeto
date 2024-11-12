@@ -55,7 +55,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a href="cardapio.html" class="nav-link">Cardápio</a>
-                        <button class="botao-dropdown">&Downarrow;</button>
+                        <button class="botao-dropdown">&blacktriangledown;</button>
                         <div class="dropdown-menu">
                             <a href="cardapio.html#cafes">Cafés</a>
                             <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
@@ -76,86 +76,19 @@
             </div>
         </div>
     </header>
+    
+    <main>
+        <div class="conteudo">
 
-    <h1 id="titulo">Pesquisa de satisfação</h1>
-    <p id="subtitulo">Complete suas informações</p> 
-    <br>
-
-        <!-- Início do formulário -->
-        <form>
-            <fieldset class="grupo">
-                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
-                <div class="campo">
-                    <label for="nome"><strong>Nome</strong></label>
-                    <input type="text" name="nome" id="nome" required>
+            <section class="local">
+                <h2>Localização</h2>
+                <div id="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.70941445991!2d-35.95102160323663!3d-8.295502863559596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98a56da17a4b1%3A0x88b2099670852257!2sCaruaru%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1729795456458!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-    
-                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
-                <div class="campo">
-                    <label for="sobrenome"><strong>Sobrenome</strong></label>
-                    <input type="text" name="sobrenome" id="sobrenome" required>
-                </div>
-            </fieldset> 
-    
-            <!-- Campo de email com-->
-            <div class="campo">
-                <label for="email"><strong>Email</strong></label>
-                <input type="email" name="email" id="email" required>
-            </div>
-    
-            <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
-            <div class="campo">
-                <label><strong>Quão satisfeito você está com os nossos produtos/serviços?</strong></label>
-                <label>
-                    <input type="radio" name="devweb" value="frontend" checked>Muito satisfeito
-                </label>
-                <label>
-                    <input type="radio" name="devweb" value="backend">Satisfeito
-                </label>
-                <label>
-                    <input type="radio" name="devweb" value="fullstack">Insatisfeito
-                </label>
-            </div>
-    
-            <!-- Caixa de texto -->
-            <div class="campo">
-                <br>
-                <label for="experiencia"><strong>Conte um pouco mais da sua experiência: </strong></label>
-                <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
-            </div>
-    
-            <!-- Botão para enviar o formulário -->
-            <button class="botao" type="submit">Concluído</button>            
-        </form>
 
-        <br>
-
-        <main> 
-            <section> 
-                <h1>A história da Casinha Branca Cafeteria</h1> 
-                <p>A Casinha Branca Cafeteria começa com um jovem casal empreendedor de Caruaru que adorava sair para ouvir boa música. Enquanto escutavam os musicais, eles sonhavam e planejavam construir um futuro onde pudessem colher os frutos de seus trabalhos. 
-               </p> 
-                <p> Em seus planos, eles se imaginavam envelhecendo e vendo seus familiares e netos se reunindo, brincando e guardando na memória o trecho de uma música na voz inconfundível de Maria Betânia. Essa canção os transportava para uma casinha branca com uma varanda.
-               </p> 
-                <p> A união do casal e sua paixão pelo café os inspirou a transformar essa visão em realidade. Assim, nasceu a Casinha Branca Cafeteria, a mais aconchegante da região, onde cada xícara de café é servida com um toque de amor e história.
-               </p> 
-          </section> 
-        </main>
-
-        <br>
-
-        <main>
-            <div class="conteudo">
-    
-                <section class="local">
-                    <h2>Localização</h2>
-                    <div id="mapa">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.70941445991!2d-35.95102160323663!3d-8.295502863559596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98a56da17a4b1%3A0x88b2099670852257!2sCaruaru%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1729795456458!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-    
-                </section>
-            </div>
-        </main>
+            </section>
+        </div>
+    </main>
 
     <footer> <!--DEFININDO O RODAPÉ-->
 
