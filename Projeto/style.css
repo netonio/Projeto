@@ -465,15 +465,14 @@ figcaption label{
 }
 
 .sobreBox img{
-    width: 25%;
+    max-width: 25%;
+    height: auto;
     border-radius: 25px;
-    padding-right: 10px;
 }
 
 .sobre{
     text-align: justify;
-    padding-top: 20px;
-    padding-left: 25px;
+    padding: 20px;
     width: 70%;
 }
 
@@ -601,9 +600,25 @@ footer h3{
         height: 300px;
     }
 
+    .sobreBox{
+        max-width: 80%;
+        margin: 20px;
+        margin-left: 15%;
+        display: block;
+    }
+
+    .sobre{
+        width: 100%;
+    }
+
+    .sobreBox img{
+        max-width: 60%;
+    }
+
     footer a img{
         max-width: 40px;
         border-radius: 12px;
+        margin-bottom: 0px;
     }
 }
 
@@ -765,6 +780,12 @@ footer h3{
     .formulario h2{
         margin: 30px;
         margin-bottom: -70px;
+    }
+
+    .sobreBox{
+        max-width: 80%;
+        margin: 20px;
+        margin-left: 15%;
     }
 
     footer a img{
