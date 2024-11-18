@@ -79,21 +79,27 @@
 
     <main>
         <div class="conteudo">
+            <!-- FORMULÁRIO DE CONTATO -->
             <div class="formulario">
                 <h2>Formulário para Contato</h2>
                 <div class="box-formulario">
+                    <!-- INÍCIO DO FORMULÁRIO -->
                     <form method="post" action="mailto:" id="formulario">
+                        <!-- CAMPO DE EMAIL -->
                         <label for="email">
                             Email: <input class="required" id="email" size="25" name="email" autocomplete="email" placeholder="Digite aqui seu email." oninput="validarEmail()"/>
                             <span class="span-required">O email precisa ser válido</span>
                         </label>
+                        <!-- CAMPO DE NOME -->
                         <label for="nome">
                             Nome: <input class="required" id="nome" type="text" size="25" name="name" autocomplete="name" placeholder="Digite aqui seu nome." oninput="validarNome()"/>
                             <span class="span-required">O nome precisa ter no mínimo 3 caracteres</span>
                         </label>
+                        <!-- CAMPO DE MENSAGEM -->
                         <label for="mensagem">
                             Mensagem:<textarea name="mensagem" id="mensagem" cols="40" rows="5" placeholder="Digite aqui a mensagem."></textarea>
                         </label>
+                        <!-- BOTÕES DE ENVIO E RESET -->
                         <input class="botao-formulario" type="submit" value="Enviar">
                         <input class="botao-formulario" type="reset" value="Limpar">
                     </form>
