@@ -14,17 +14,24 @@
         
         <!--BARRA DE NAVEGAÇÃO PARA DESKTOP-->
         <nav class="menu-desktop">
+            <!--BOTÃO PARA MUDAR TEMA-->
             <button onclick="mudarTema()" type="button" class="tema">&#9728;</button>
+
+            <!--CRIANDO A LISTA DO MENU-->
             <div class="nav-list">
                 <ul>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">Inicio</a>
                     </li>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item dropdown">
                         <a href="cardapio.html" class="nav-link">Cardápio</a>
-                        <button class="botao-dropdown">&blacktriangledown;</button> <!--BOTÃO PARA O MENU DROPDOWN-->
-
-                        <div class="dropdown-menu"> <!--LINKANDO AS SESSÕES-->
+                        
+                        <!--BOTÃO PARA O MENU DROPDOWN-->
+                        <button class="botao-dropdown">&blacktriangledown;</button> 
+                        <!--LINKANDO AS SESSÕES-->
+                        <div class="dropdown-menu"> 
                             <a href="cardapio.html#cafes">Cafés</a>
                             <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
                             <a href="cardapio.html#cafes-gelados">Cafés Gelados</a>
@@ -37,6 +44,7 @@
                             <a href="cardapio.html#sobremesas">Sobremesas</a>
                         </div>
                     </li>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item">
                         <a href="sobre.html" class="nav-link">Sobre</a>
                     </li>
@@ -79,6 +87,7 @@
     
     <main>
         <div class="conteudo ptbr">
+            <!--SESSÃO SOBRE A HISTÓRIA DA CAFETERIA-->
             <div class="sobreBox">
                 <section class="sobre"> 
                     <h1>A história da Casinha Branca Cafeteria</h1> 
@@ -87,13 +96,21 @@
                     A união do casal e sua paixão pelo café os inspirou a transformar essa visão em realidade. Assim, nasceu a Casinha Branca Cafeteria, a mais aconchegante da região, onde cada xícara de café é servida com um toque de amor e história.
                     
                 </section> 
+                <!--IMAGEM DA DONA-->
                 <img src="Imagens/dona.jpg" alt="Dona da Cafeteria Casinha Branca">
             </div>
 
+            <!--CRIANDO A SESSÃO DA LOCALIZAÇÃO DA CAFETERIA-->
             <section class="local">
                 <h2>Localização</h2>
+                <!--MAPA DO GOOGLE MAPS-->
                 <div id="mapa">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.70941445991!2d-35.95102160323663!3d-8.295502863559596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98a56da17a4b1%3A0x88b2099670852257!2sCaruaru%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1729795456458!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.70941445991!2d-35.95102160323663!3d-8.295502863559596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a98a56da17a4b1%3A0x88b2099670852257!2sCaruaru%20Shopping!5e0!3m2!1spt-BR!2sbr!4v1729795456458!5m2!1spt-BR!2sbr" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização da Cafeteria Casinha Branca"></iframe>
                 </div>
             </section>
         </div>
@@ -101,14 +118,17 @@
 
     <footer> <!--DEFININDO O RODAPÉ-->
 
+        <!--SESSÃO DE INFORMAÇÕES DE CONTATO-->
         <section class="informacoes">
             <div class="endereco">
                 <h3>Endereço:</h3>
                 <p>Av. Adjar da Silva Casé, 800 - Indianópolis, Caruaru - PE, 55024-740</p>
+                <!--LINK PARA O MAPA-->
                 <a href="#mapa" style="text-decoration: underline;">Google Maps</a>
             </div>
 
             <div class="contato">
+                <!--LINK PARA O FORMULÁRIO DE CONTATO-->
                 <h3><a href="contato.html#formulario" style="text-decoration: underline;">Contato:</a></h3>
                 <ul>
                     <li>Telefone: (81) 99607-2562</li>
@@ -117,11 +137,14 @@
             </div>
         </section>
 
+        <!--BOTÕES DE REDES SOCIAIS-->
         <section class="redes-sociais">
             <ul>
-            <li><a href="https://www.instagram.com/casinhabrancacafeteria/" target="_blank"><img src="Imagens/instagram-icon.jfif" alt="Icone Instagram"></a></li>
-            <li><a href="https://api.whatsapp.com/send/?phone=5581996072562&text&type=phone_number&app_absent=0" target="_blank"><img src="Imagens/whatsapp-icon.png" alt="Icone Whatsapp"></a></li>
-            </ul>
+                <!--LINK PARA O INSTAGRAM-->
+                <li><a href="https://www.instagram.com/casinhabrancacafeteria/" target="_blank"><img src="Imagens/instagram-icon.jfif" alt="Icone Instagram"></a></li>
+                <!--LINK PARA O WHATSAPP-->
+                <li><a href="https://api.whatsapp.com/send/?phone=5581996072562&text&type=phone_number&app_absent=0" target="_blank"><img src="Imagens/whatsapp-icon.png" alt="Icone Whatsapp"></a></li>
+                </ul>
         </section>
     </footer>
 
