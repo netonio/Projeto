@@ -10,6 +10,7 @@
     scroll-behavior: smooth; /* Adiciona uma rolagem suave */
 }
 
+/* Esconde a barra de rolagem horizontal */
 body{
     overflow-x: hidden;
 }
@@ -24,12 +25,12 @@ body{
 
 /* Estilizando o cabeçalho do site */
 header{
-    width: 100%;
-    height: 220px;
-    border: 1px solid var(--cor-principal);
-    background-color:  var(--cor-principal);
-    color: var(--cor-terciaria);
-    text-align: center;
+    width: 100%; /* Define a largura total do cabeçalho */
+    height: 220px; /* Define a altura do cabeçalho */
+    border: 1px solid var(--cor-principal); /* Cria uma borda usando a cor principal */
+    background-color: var(--cor-principal); /* Define a cor de fundo do cabeçalho */
+    color: var(--cor-terciaria); /* Cor do texto */
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
 }
 
 .logo{
@@ -38,22 +39,23 @@ header{
     height: 150px;
 }
 
-/* Estilizando o botão para mudar o tema */
-.tema{ 
-    height: 10px;
+/* Estilizando o botão para mudança de tema */
+.tema {
+    height: 10px; /* Define a altura do botão */
     padding: 5px;
     padding-top: 10px;
     margin: 2px;
     border: none;
-    background-color: var(--cor-principal);
-    color: var(--cor-terciaria);
-    font-size: 1.5rem;
+    background-color: var(--cor-principal); /* Usa a cor principal como fundo */
+    color: var(--cor-terciaria); /* Define a cor do texto */
+    font-size: 1.5rem; /* Define o tamanho da fonte */
 }
 
-.tema:hover{
+/* Quando o botão tema é hover, aumenta o tamanho da fonte para dar contraste visual */
+.tema:hover {
     font-size: 1.6rem;
-    transition:font-size 1s; /*Transição para o aumento da fonte*/
-    cursor: pointer;
+    transition: font-size 1s; /* A transição de aumento de tamanho é suave */
+    cursor: pointer; /* Muda o cursor para indicar que o item é clicável */
 }
 
 /* Estilizando o menu de navegação em desktop */
@@ -98,7 +100,7 @@ header{
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: inline-block; /* Alinha os itens, e permite definir suas dimensões */
 }
 
 .dropdown-menu{
@@ -107,7 +109,7 @@ header{
     margin-top: 8px;
     display: none;
     position: absolute;
-    z-index: 1;
+    z-index: 1; /* Sobrepõe o menu */
     border: solid 1px black;
     background-color: var(--cor-principal);
     color: var(--cor-terciaria);
@@ -129,8 +131,8 @@ header{
 
 .show{
     display: flex;
-    flex-wrap: wrap;
-    gap: 5px 10px;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 5px 10px; /* Define o espaçamento entre os itens */
 }
 
 .botao-dropdown{
