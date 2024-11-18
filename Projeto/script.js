@@ -1,4 +1,5 @@
-if (window.location.pathname.endsWith('index.html')) { //O código abaixo só acontecerá na página em que seu caminho termina com index.html
+//O código abaixo só acontecerá na página em que seu caminho termina com index.html
+if (window.location.pathname.endsWith('index.html')) { 
 
     let count = 1; //Criando a variavel count
     let interval;
@@ -135,7 +136,7 @@ if (window.location.pathname.endsWith('contato.html')) {
         spans[index].style.display = 'none'
     }
 
-    // Função para validar o email, chamando a função de erro enqunato a condição não é atendida
+    // Função para validar o email, chamando a função de erro enquanto a condição não é atendida
     function validarEmail() {
         if (!emailRegex.test(campos[0].value)) {
             definirErro(0);
@@ -171,60 +172,62 @@ if (window.location.pathname.endsWith('contato.html')) {
     });
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Obtendo o elemento de entrada da barra de pesquisa
-    const searchinput = document.getElementById('search');
+if (window.location.pathname.endsWith('cardapio.html')) {
+    document.addEventListener('DOMContentLoaded', function () {
+        // Obtendo o elemento de entrada da barra de pesquisa
+        const searchinput = document.getElementById('search');
 
-    // Verificando se o elemento de input foi encontrado
-    if (searchinput) {
-        // Adicionando o evento 'input' ao campo de pesquisa
-        searchinput.addEventListener('input', (event) => {
-            const value = formatString(event.target.value);
+        // Verificando se o elemento de input foi encontrado
+        if (searchinput) {
+            // Adicionando o evento 'input' ao campo de pesquisa
+            searchinput.addEventListener('input', (event) => {
+                const value = formatString(event.target.value);
 
-            // Selecionando todas as seções que contêm a classe .container e .image-container
-            const sections = document.querySelectorAll('section'); // Seleciona todas as seções da página
+                // Selecionando todas as seções que contêm a classe .container e .image-container
+                const sections = document.querySelectorAll('section'); // Seleciona todas as seções da página
 
-            sections.forEach(section => {
-                const container = section.querySelector('.container');  // O título da seção
-                const imageContainer = section.querySelector('.image-container');  // A área das imagens
+                sections.forEach(section => {
+                    const container = section.querySelector('.container');  // O título da seção
+                    const imageContainer = section.querySelector('.image-container');  // A área das imagens
 
-                // Selecionando todas as figuras dentro de .image-container
-                const figures = imageContainer ? imageContainer.querySelectorAll('figure') : [];
+                    // Selecionando todas as figuras dentro de .image-container
+                    const figures = imageContainer ? imageContainer.querySelectorAll('figure') : [];
 
-                let hasVisibleItem = false;  // Flag para verificar se ao menos um item é visível
+                    let hasVisibleItem = false;  // Flag para verificar se ao menos um item é visível
 
-                // Iterando sobre todas as figuras da seção
-                figures.forEach(figure => {
-                    const caption = figure.querySelector('figcaption'); // Pega o <figcaption> (legenda do item)
-                    const captionText = caption ? caption.textContent || caption.innerText : ''; // Obtém o texto da legenda
+                    // Iterando sobre todas as figuras da seção
+                    figures.forEach(figure => {
+                        const caption = figure.querySelector('figcaption'); // Pega o <figcaption> (legenda do item)
+                        const captionText = caption ? caption.textContent || caption.innerText : ''; // Obtém o texto da legenda
 
-                    // Exibindo ou ocultando a figura com base no texto da pesquisa
-                    if (formatString(captionText).includes(value)) {
-                        figure.style.display = 'flex';  // Exibe a figura com o layout flex
-                        hasVisibleItem = true;  // Ao menos um item é visível
+                        // Exibindo ou ocultando a figura com base no texto da pesquisa
+                        if (formatString(captionText).includes(value)) {
+                            figure.style.display = 'flex';  // Exibe a figura com o layout flex
+                            hasVisibleItem = true;  // Ao menos um item é visível
+                        } else {
+                            figure.style.display = 'none';  // Oculta a figura e remove do layout
+                        }
+                    });
+
+                    // Ocultando ou exibindo o título da seção (container) dependendo da visibilidade dos itens
+                    if (hasVisibleItem) {
+                        container.style.display = 'block';  // Exibe a caixa do título
+                        section.style.display = 'block';  // Exibe a seção inteira
                     } else {
-                        figure.style.display = 'none';  // Oculta a figura e remove do layout
+                        container.style.display = 'none';  // Oculta a caixa do título
+                        section.style.display = 'none';  // Oculta a seção inteira
                     }
                 });
-
-                // Ocultando ou exibindo o título da seção (container) dependendo da visibilidade dos itens
-                if (hasVisibleItem) {
-                    container.style.display = 'block';  // Exibe a caixa do título
-                    section.style.display = 'block';  // Exibe a seção inteira
-                } else {
-                    container.style.display = 'none';  // Oculta a caixa do título
-                    section.style.display = 'none';  // Oculta a seção inteira
-                }
             });
-        });
-    } else {
-        console.error("Elemento de input com id 'search' não encontrado.");
-    }
-});
+        } else {
+            console.error("Elemento de input com id 'search' não encontrado.");
+        }
+    });
 
-// Função para formatar a string e facilitar a pesquisa
-function formatString(value) {
-    return value
-        .toLowerCase() // Converte para letras minúsculas
-        .trim(); // Remove espaços desnecessários
+    // Função para formatar a string e facilitar a pesquisa
+    function formatString(value) {
+        return value
+            .toLowerCase() // Converte para letras minúsculas
+            .trim(); // Remove espaços desnecessários
+    }
 }
