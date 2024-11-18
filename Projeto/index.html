@@ -10,21 +10,28 @@
 </head>
 <body>
     <header> <!--DEFININDO A FACHADA-->
-        <img class="logo" src="Imagens/logo1.png" alt="Logo da Cafeteria Casinha Branca">
+        <img class="logo" src="Imagens/logo1.png" alt="Logo Casinha Branca">
         
         <!--BARRA DE NAVEGAÇÃO PARA DESKTOP-->
         <nav class="menu-desktop">
+            <!--BOTÃO PARA MUDAR TEMA-->
             <button onclick="mudarTema()" type="button" class="tema">&#9728;</button>
+
+            <!--CRIANDO A LISTA DO MENU-->
             <div class="nav-list">
                 <ul>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">Inicio</a>
                     </li>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item dropdown">
                         <a href="cardapio.html" class="nav-link">Cardápio</a>
-                        <button class="botao-dropdown">&blacktriangledown;</button> <!--BOTÃO PARA O MENU DROPDOWN-->
-
-                        <div class="dropdown-menu"> <!--LINKANDO AS SESSÕES-->
+                        
+                        <!--BOTÃO PARA O MENU DROPDOWN-->
+                        <button class="botao-dropdown">&blacktriangledown;</button> 
+                        <!--LINKANDO AS SESSÕES-->
+                        <div class="dropdown-menu"> 
                             <a href="cardapio.html#cafes">Cafés</a>
                             <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
                             <a href="cardapio.html#cafes-gelados">Cafés Gelados</a>
@@ -37,6 +44,7 @@
                             <a href="cardapio.html#sobremesas">Sobremesas</a>
                         </div>
                     </li>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item">
                         <a href="sobre.html" class="nav-link">Sobre</a>
                     </li>
@@ -48,14 +56,19 @@
         </nav>
 
         <div class="menu-mobile"> <!--INICIANDO O MENU MOBILE-->
+            <!--CRIANDO A LISTA DO MENU-->
             <div class="nav-list">
                 <ul>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item">
                         <a href="index.html" class="nav-link">Inicio</a>
                     </li>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item dropdown">
                         <a href="cardapio.html" class="nav-link">Cardápio</a>
+                        <!--BOTÃO PARA O MENU DROPDOWN-->
                         <button class="botao-dropdown">&blacktriangledown;</button>
+                        <!--LINKANDO AS SESSÕES-->
                         <div class="dropdown-menu">
                             <a href="cardapio.html#cafes">Cafés</a>
                             <a href="cardapio.html#cafes-especiais">Cafés Especiais</a>
@@ -69,6 +82,7 @@
                             <a href="cardapio.html#sobremesas">Sobremesas</a>
                         </div>
                     </li>
+                    <!--CRIANDO OS ITENS DA LISTA-->
                     <li class="nav-item">
                         <a href="sobre.html" class="nav-link">Sobre</a>
                     </li>
@@ -202,14 +216,17 @@
 
     <footer> <!--DEFININDO O RODAPÉ-->
 
+        <!--SESSÃO DE INFORMAÇÕES DE CONTATO-->
         <section class="informacoes">
             <div class="endereco">
                 <h3>Endereço:</h3>
                 <p>Av. Adjar da Silva Casé, 800 - Indianópolis, Caruaru - PE, 55024-740</p>
-                <a href="sobre.html#mapa" style="text-decoration: underline;">Google Maps</a>
+                <!--LINK PARA O MAPA-->
+                <a href="#mapa" style="text-decoration: underline;">Google Maps</a>
             </div>
 
             <div class="contato">
+                <!--LINK PARA O FORMULÁRIO DE CONTATO-->
                 <h3><a href="contato.html#formulario" style="text-decoration: underline;">Contato:</a></h3>
                 <ul>
                     <li>Telefone: (81) 99607-2562</li>
@@ -218,11 +235,14 @@
             </div>
         </section>
 
+        <!--BOTÕES DE REDES SOCIAIS-->
         <section class="redes-sociais">
             <ul>
-            <li><a href="https://www.instagram.com/casinhabrancacafeteria/" target="_blank"><img src="Imagens/instagram-icon.jfif" alt="Icone Instagram"></a></li>
-            <li><a href="https://api.whatsapp.com/send/?phone=5581996072562&text&type=phone_number&app_absent=0" target="_blank"><img src="Imagens/whatsapp-icon.png" alt="Icone Whatsapp"></a></li>
-            </ul>
+                <!--LINK PARA O INSTAGRAM-->
+                <li><a href="https://www.instagram.com/casinhabrancacafeteria/" target="_blank"><img src="Imagens/instagram-icon.jfif" alt="Icone Instagram"></a></li>
+                <!--LINK PARA O WHATSAPP-->
+                <li><a href="https://api.whatsapp.com/send/?phone=5581996072562&text&type=phone_number&app_absent=0" target="_blank"><img src="Imagens/whatsapp-icon.png" alt="Icone Whatsapp"></a></li>
+                </ul>
         </section>
     </footer>
 
