@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casinha Branca</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!--MUDANDO O FAVICON:-->
+    <link rel="shortcut icon" href="Imagens/iconecb.ico" type="image/x-icon">
+    <!--LINKANDO O SITE DE ÍCONDES:-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--MUDANDO O FAVICON:-->
-    <link rel="shortcut icon" href="Imagens/iconecb.ico" type="image/x-icon">
 </head>
 <body>
     <header> <!--DEFININDO A FACHADA-->
@@ -107,6 +108,18 @@
                 </div>
             </div>
 
+            <!-- Modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <!-- Botão para fechar -->
+                    <button class="close" id="close-btn">Fechar</button>
+                    <img id="modal-image" src="" alt="">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-description"></p>
+                    <p id="modal-price"></p> <!-- Aqui você pode adicionar mais informações, como preço, descrição etc. -->
+                </div>
+            </div>
+
             <section id="cafes">
                 <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
                     <h2>Cafés</h2>
@@ -114,7 +127,7 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Expresso', 'Xícara de café expresso', 'Imagens/expresso.jpg')">
                         <img src="Imagens/expresso.jpg" alt="Xícara de café Expresso" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso <hr>
@@ -626,77 +639,77 @@
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
                     <figure>
-                        <img src="Imagens/cafe2.JPG" alt="Sanduíche de Queijo OU Misto" class="produto">
+                        <img src="Imagens/sanduichemisto.jpg" alt="Sanduíche de Queijo OU Misto" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Queijo OU Misto<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Sanduíche Americano" class="produto">
+                        <img src="Imagens/sanduicheamericano.jpg" alt="Sanduíche Americano" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche Americano<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe2.JPG" alt="Sanduíche de Peito de Peru e Cream Cheese" class="produto">
+                        <img src="Imagens/sanduichepeitodeperu.jpg" alt="Sanduíche de Peito de Peru e Cream Cheese" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Peito de Peru e Cream Cheese<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Pão na Chapa" class="produto">
+                        <img src="Imagens/paonachapa.jpg" alt="Pão na Chapa" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão na Chapa<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Pão na Chapa com Requeijão" class="produto">
+                        <img src="Imagens/paonachaparequeijao.jpg" alt="Pão na Chapa com Requeijão" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão na Chapa com Requeijão<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Pão de Queijo com Cream Cheese" class="produto">
+                        <img src="Imagens/paodequeijo.jpg" alt="Pão de Queijo com Cream Cheese" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão de Queijo com Cream Cheese<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe2.JPG" alt="Pão de Queijo com Peito de Peru e Cream Cheese" class="produto">
+                        <img src="Imagens/paodequeijopeitodeperu.jpg" alt="Pão de Queijo com Peito de Peru e Cream Cheese" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão de Queijo com Peito de Peru e Cream Cheese<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Pão de Queijo Doce" class="produto">
+                        <img src="Imagens/paodequeijodoce.jpg" alt="Pão de Queijo Doce" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão de Queijo Doce<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Sanduíche de Mortadela 'Ouro'" class="produto">
+                        <img src="Imagens/sanduichemortadela.jpg" alt="Sanduíche de Mortadela 'Ouro'" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Mortadela "Ouro"<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe2.JPG" alt="Sanduíche de Frango" class="produto">
+                        <img src="Imagens/sanduichefrango.jpg" alt="Sanduíche de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Frango<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Sanduíche de Atum" class="produto">
+                        <img src="Imagens/sanduicheatum.jpg" alt="Sanduíche de Atum" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Atum<hr>
                             <p></p>
@@ -713,147 +726,147 @@
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Cuscuz Amanteigado" class="produto">
+                        <img src="Imagens/cuscuz.jpg" alt="Cuscuz Amanteigado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz Amanteigado<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe2.JPG" alt="Cuscuz Recheado Charque" class="produto">
+                        <img src="Imagens/cuscuzrecheadocharque.jpg" alt="Cuscuz Recheado Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz Recheado Charque<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Cuscuz Recheado Frango" class="produto">
+                        <img src="Imagens/cuscuzrecheadofrango.jpg" alt="Cuscuz Recheado Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz Recheado Frango<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Cuscuz com Queijo Coalho" class="produto">
+                        <img src="Imagens/cuscuzrecheadoqueijo.jpg" alt="Cuscuz com Queijo Coalho" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz com Queijo Coalho<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe2.JPG" alt="Cuscuz Frango com Queijo" class="produto">
+                        <img src="Imagens/cuscuzrecheadofrangocqueijo.jpg" alt="Cuscuz Frango com Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz Frango com Queijo <hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Pamonha" class="produto">
+                        <img src="Imagens/pamonha.jpg" alt="Pamonha" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pamonha<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Pamonha com Queijo" class="produto">
+                        <img src="Imagens/pamonhacqueijo.jpg" alt="Pamonha com Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pamonha com Queijo<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Omelete de Queijo" class="produto">
+                        <img src="Imagens/omeletequeijo.jpg" alt="Omelete de Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Omelete de Queijo<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Omelete de Frango" class="produto">
+                        <img src="Imagens/omeletefrango.jpg" alt="Omelete de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Omelete de Frango<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Omelete de Charque" class="produto">
+                        <img src="Imagens/omeletecharque.jpg" alt="Omelete de Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Omelete de Charque<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Crepioca de Queijo" class="produto">
+                        <img src="Imagens/crepiocaqueijo.jpg" alt="Crepioca de Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Crepioca de Queijo<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Crepioca de Frango" class="produto">
+                        <img src="Imagens/crepiocafrango.jpg" alt="Crepioca de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Crepioca de Frango<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Crepioca de Charque" class="produto">
+                        <img src="Imagens/crepiocacharque.jpg" alt="Crepioca de Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Crepioca de Charque<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Tapioca de Queijo Coalho" class="produto">
+                        <img src="Imagens/tapiocaqueijo.jpg" alt="Tapioca de Queijo Coalho" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Queijo Coalho<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Tapioca de Frango" class="produto">
+                        <img src="Imagens/tapiocafrango.jpg" alt="Tapioca de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Frango<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Tapioca de Frango com Queijo" class="produto">
+                        <img src="Imagens/tapiocafrangocqueijo.jpg" alt="Tapioca de Frango com Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Frango com Queijo<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Tapioca de Coco com Leite Condensado" class="produto">
+                        <img src="Imagens/tapiocacoco.jpg" alt="Tapioca de Coco com Leite Condensado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Coco com Leite Condensado<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Tapioca de Charque" class="produto">
+                        <img src="Imagens/tapiocacharque.jpg" alt="Tapioca de Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Charque<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Ovos Mexidos" class="produto">
+                        <img src="Imagens/ovosmexidos.jpg" alt="Ovos Mexidos" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Ovos Mexidos<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Fatia de Queijo Coalho" class="produto">
+                        <img src="Imagens/queijocoalho.jpg" alt="Fatia de Queijo Coalho" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Fatia de Queijo Coalho<hr>
                             <p></p>
                         </figcaption>
                     </figure>
                     <figure>
-                        <img src="Imagens/cafe3.jpg" alt="Copo de Leite" class="produto">
+                        <img src="Imagens/copodeleite.jpg" alt="Copo de Leite" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Leite<hr>
                             <p></p>
