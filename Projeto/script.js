@@ -73,6 +73,7 @@ function mudarTema() {
         root.style.setProperty('--cor-secundaria', 'rgb(195, 195, 140)');
         root.style.setProperty('--cor-fonte', 'rgb(77, 54, 35)');
         localStorage.setItem('tema', 'escuro') // Armazena a preferência
+        document.querySelector
     } else {
         root.style.setProperty('--cor-principal', 'rgb(56, 133, 124)');
         root.style.setProperty('--cor-secundaria', 'rgb(255,255,255)');
@@ -86,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const dropdownMenus = document.querySelectorAll('.dropdown-menu'); // Seleciona todos os menus dropdown
     const botaoMobileMenu = document.querySelector('.botao-menu-mobile');
     const mobileMenu = document.querySelector('.menu-mobile');
+    const iconeOriginal = botaoMobileMenu.innerHTML; // Armazena o ícone original do botão
 
     // Toggle do menu dropdown
     btdropdown.forEach((btn, index) => {
@@ -104,16 +106,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Toggle do menu mobile
-    botaoMobileMenu.addEventListener('click', function (event) {
+     // Toggle do menu mobile
+     botaoMobileMenu.addEventListener('click', function (event) {
         event.stopPropagation(); // Impede o fechamento do menu mobile ao clicar no botão
         mobileMenu.classList.toggle('abrir-menu');
+        
+        // Altera o ícone para 'X' ou volta ao original
+        if (mobileMenu.classList.contains('abrir-menu')) {
+            botaoMobileMenu.innerHTML = '&#10006;'; // Ícone 'X'
+        } else {
+            botaoMobileMenu.innerHTML = iconeOriginal; // Ícone original
+        }
     });
 
     // Fechar o menu mobile se o usuário clicar fora dele
     window.addEventListener('click', function (event) {
         if (!event.target.closest('.menu-mobile') && !event.target.matches('.botao-menu-mobile')) {
             mobileMenu.classList.remove('abrir-menu');
+            botaoMobileMenu.innerHTML = iconeOriginal;
         }
     });
 });
@@ -231,3 +241,32 @@ if (window.location.pathname.endsWith('cardapio.html')) {
             .trim(); // Remove espaços desnecessários
     }
 }
+
+// Aguarda o carregamento completo do DOM antes de executar o código
+document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById("myModal");
+
+    // Obtenha o botão de fechar
+    var closeBtn = document.getElementById("close-btn");
+
+    // Função para abrir o modal com as informações do produto
+    window.openModal = function(title, description, imageSrc) {
+        // Atualizar o conteúdo do modal com as informações do produto
+        document.getElementById("modal-title").textContent = title;
+        document.getElementById("modal-description").textContent = description;
+        document.getElementById("modal-image").src = imageSrc;  // Atualiza a imagem no modal
+        modal.style.display = "block";  // Mostrar o modal
+    }
+
+    // Quando o usuário clicar no botão de fechar, fechar o modal
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Quando o usuário clicar fora do modal, ele também será fechado
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
