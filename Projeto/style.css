@@ -18,7 +18,7 @@ body{
 /* Definindo cores principais da paleta para fácil manutenção */
 :root{
     --cor-principal: rgb(56, 133, 124); /*Cor para fachada e rodapé*/
-    --cor-secundaria: rgb(255, 255, 255); /*Cor para o body*/
+    --cor-secundaria: rgb(255,255,255); /*Cor para o body*/
     --cor-terciaria: rgb(255,255,255); /*Cor para o contraste com a primária*/
     --cor-fonte: rgb(0,0,0); /*Cor para a fonte de conteúdo*/
 }
@@ -299,9 +299,10 @@ figcaption label{
 }
 
 .carrossel{
-    margin: 30px auto;
-    width: 800px;
-    height: 400px;
+    margin: 40px 0;
+    margin-left: -1.5%;
+    width: 103%;
+    height: auto;
     overflow: hidden; /*Esconde as outras imagens*/
 }
 
@@ -322,12 +323,12 @@ figcaption label{
 }
 
 .slide img{
-    width: 800px;
+    width: 100%;
 }
 
 .navegacao-manual{
     position: absolute;
-    width: 800px;
+    width: 100%;
     margin-top: -40px; /*Margem em relação ao topo da imagem*/
     display: flex;
     justify-content: center;
@@ -377,7 +378,7 @@ figcaption label{
 
 .auto-navegacao{
     position: absolute;
-    width: 800px;
+    width: 100%;
     margin-top: 360px; /*Margem em relação ao topo da página*/
     display: flex;
     justify-content: center;
@@ -551,24 +552,6 @@ footer h3{
         width: 70%;
     }
 
-    .carrossel{
-        width: 600px;
-        height: 400px;
-    }
-
-    .carrossel img{
-        width: 100%;
-        height: 100%;
-    }
-
-    .navegacao-manual{
-        width: 600px;
-    }
-
-    .auto-navegacao{
-        width: 600px;
-    }
-
     .container{
         width: auto;
         justify-content: baseline;
@@ -719,18 +702,13 @@ footer h3{
     }
 
     .carrossel{
-        width: 400px;
-        height: 200px;
-    }
-
-    .carrossel img{
-        width: 100%;
-        height: auto;
+        width: 110%;
+        height: 250px;
+        margin-left: -21px;
     }
 
     .navegacao-manual{
-        width: 400px;
-        margin-top: -220px;
+        margin-top: -180px;
     }
 
     .manual-button:not(:last-child){
@@ -738,8 +716,7 @@ footer h3{
     }
 
     .auto-navegacao{
-        width: 400px;
-        margin-top: 180px;
+        margin-top: 220px;
     }
 
     .auto-navegacao div:not(:last-child){
