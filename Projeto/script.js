@@ -242,49 +242,51 @@ if (window.location.pathname.endsWith('cardapio.html')) {
     }
 }
 
-// Aguarda o carregamento completo do DOM antes de executar o código
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.querySelector("#modalid");
-    const fade = document.querySelector("#fade");
-    const closeBtn = document.getElementById("close-btn"); // Obtém o botão de fechar
+if (window.location.pathname.endsWith('cardapio.html') || window.location.pathname.endsWith('index.html')) {
+    // Aguarda o carregamento completo do DOM antes de executar o código
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.querySelector("#modalid");
+        const fade = document.querySelector("#fade");
+        const closeBtn = document.getElementById("close-btn"); // Obtém o botão de fechar
 
-    // Função para abrir e fechar o modal
-    const toggleModal = () => {
-        modal.classList.toggle("hide");
-        fade.classList.toggle("hide");
-    };
+        // Função para abrir e fechar o modal
+        const toggleModal = () => {
+            modal.classList.toggle("hide");
+            fade.classList.toggle("hide");
+        };
 
-    // Função para abrir o modal com as informações do produto
-    window.openModal = function(title, description, imageSrc, price1, price2) {
-        // Atualizar o conteúdo do modal com as informações do produto
-        document.getElementById("modal-title").textContent = title; // Atualiza o título no modal
-        document.getElementById("modal-description").textContent = description; // Atualiza a descrição no modal
-        document.getElementById("modal-image").src = imageSrc;  // Atualiza a imagem no modal
-        document.getElementById("modal-price1").textContent = price1; // Atualiza o preço1 no modal
-        document.getElementById("modal-price2").textContent = price2; // Atualiza o preço2 no modal
+        // Função para abrir o modal com as informações do produto
+        window.openModal = function(title, description, imageSrc, price1, price2) {
+            // Atualizar o conteúdo do modal com as informações do produto
+            document.getElementById("modal-title").textContent = title; // Atualiza o título no modal
+            document.getElementById("modal-description").textContent = description; // Atualiza a descrição no modal
+            document.getElementById("modal-image").src = imageSrc;  // Atualiza a imagem no modal
+            document.getElementById("modal-price1").textContent = price1; // Atualiza o preço1 no modal
+            document.getElementById("modal-price2").textContent = price2; // Atualiza o preço2 no modal
 
-        // Verifica se a descrição está vazia
-        if (!description || description.trim() === "") {
-            // Se a descrição estiver vazia, altera o top do preço1 para 40%
-            document.getElementById("modal-price1").style.top = "40%";
-        } else {
-            // Caso contrário, mantém o top do preço1 em seu valor padrão
-            document.getElementById("modal-price1").style.top = "";
-        }
-        
-        // Usando a função toggleModal para mostrar o modal
-        toggleModal();
-    };
-
-    // Vincular o evento de clique ao botão de fechar no JavaScript
-    closeBtn.addEventListener('click', function() {
-        toggleModal();
-    });
-
-    // Quando o usuário clicar fora do modal (no fade), também fechará o modal
-    window.addEventListener('click', function(event) {
-        if (event.target === fade) {
+            // Verifica se a descrição está vazia
+            if (!description || description.trim() === "") {
+                // Se a descrição estiver vazia, altera o top do preço1 para 40%
+                document.getElementById("modal-price1").style.top = "40%";
+            } else {
+                // Caso contrário, mantém o top do preço1 em seu valor padrão
+                document.getElementById("modal-price1").style.top = "";
+            }
+            
+            // Usando a função toggleModal para mostrar o modal
             toggleModal();
-        }
+        };
+
+        // Vincular o evento de clique ao botão de fechar no JavaScript
+        closeBtn.addEventListener('click', function() {
+            toggleModal();
+        });
+
+        // Quando o usuário clicar fora do modal (no fade), também fechará o modal
+        window.addEventListener('click', function(event) {
+            if (event.target === fade) {
+                toggleModal();
+            }
+        });
     });
-});
+}
