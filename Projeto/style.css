@@ -203,6 +203,95 @@ header{
     outline: none;
 }
 
+/* Estilizando o botão */
+.modal-content button{
+    padding: 0.6rem 1.2rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-terciaria);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Estilizando o fade da tela, tornando "escura" */
+#fade{
+    position: fixed; /* Posicionamento fixo na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Cor de fundo preta semi-transparente */
+    z-index: 2;
+    transition: 0.5s;
+}
+
+/* Estilizando o modal */
+.modal{
+    position: fixed; /* Posicionamento fixo na tela */
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* Ajusta a posição para centralizar a modal */
+    background-color: var(--cor-secundaria);
+    z-index: 3;
+    transition: 0.5s;
+}
+
+.modal h2{
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+}
+
+.modal img{
+    margin-bottom: 1rem;
+    border: 2px solid var(--cor-principal);
+    border-radius: 10px;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-principal);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body{
+    display: flex;
+}
+
+.modal-description{
+    flex-direction: column;
+    padding-top: 0.3rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.modal-price{
+    font-size: 1.1rem;
+    position: fixed;
+    bottom: 10%;
+}
+
+#modal-price1{
+    bottom: 20%;
+}
+
+.modal.hide{
+    top: 0; /* Move a modal para o topo da tela quando escondido */
+}
+
+/* Escondendo o modal */
+.hide{
+    opacity: 0; /* Torna o elemento invisível */
+    pointer-events: none; /* Impede que o elemento receba interações do usuário */
+}
+
 /*Estilizando a área do mapa*/
 .local{
     display: flex;
@@ -260,6 +349,7 @@ hr{
     flex: 1 1 calc(25% - 10px); /* Ajusta a largura para 25% menos a margem */
     max-width: 25%; /* Define uma largura máxima para cada produto */
     text-align: center; /* Centraliza o texto */
+    cursor: pointer;
 }
 
 figure {
@@ -299,16 +389,16 @@ figcaption label{
 }
 
 .carrossel{
-    margin: 40px 0;
+    margin: 20px 0;
     margin-left: -1.5%;
     width: 103%;
-    height: auto;
+    height: 350px;
     overflow: hidden; /*Esconde as outras imagens*/
 }
 
 .slides{
-    width: 400%;
-    height: 400px;
+    width: 412%;
+    height: 350px;
     display: flex; /*Deixa as imagens lado a lado*/
 }
 
@@ -324,12 +414,14 @@ figcaption label{
 
 .slide img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .navegacao-manual{
     position: absolute;
     width: 100%;
-    margin-top: -40px; /*Margem em relação ao topo da imagem*/
+    margin-top: -30px; /*Margem em relação ao topo da imagem*/
     display: flex;
     justify-content: center;
 }
@@ -379,7 +471,7 @@ figcaption label{
 .auto-navegacao{
     position: absolute;
     width: 100%;
-    margin-top: 360px; /*Margem em relação ao topo da página*/
+    margin-top: 320px; /*Margem em relação ao topo da página*/
     display: flex;
     justify-content: center;
 }
@@ -552,6 +644,22 @@ footer h3{
         width: 70%;
     }
 
+    .carrossel{
+        height: 250px;
+    }
+    
+    .slides{
+        height: 250px;
+    }
+
+    .navegacao-manual{
+        margin-top: -30px;
+    }
+
+    .auto-navegacao{
+        margin-top: 220px;
+    }
+
     .container{
         width: auto;
         justify-content: baseline;
@@ -702,13 +810,18 @@ footer h3{
     }
 
     .carrossel{
+        margin-left: -20px;
         width: 110%;
-        height: 250px;
-        margin-left: -21px;
+        height: 200px;
+    }
+
+    .slides{
+        width: 412%;
+        height: 200px;
     }
 
     .navegacao-manual{
-        margin-top: -180px;
+        margin-top: -30px;
     }
 
     .manual-button:not(:last-child){
@@ -716,7 +829,7 @@ footer h3{
     }
 
     .auto-navegacao{
-        margin-top: 220px;
+        margin-top: 170px;
     }
 
     .auto-navegacao div:not(:last-child){
