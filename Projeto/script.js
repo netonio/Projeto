@@ -244,29 +244,47 @@ if (window.location.pathname.endsWith('cardapio.html')) {
 
 // Aguarda o carregamento completo do DOM antes de executar o código
 document.addEventListener('DOMContentLoaded', function () {
-    var modal = document.getElementById("myModal");
+    const modal = document.querySelector("#modalid");
+    const fade = document.querySelector("#fade");
+    const closeBtn = document.getElementById("close-btn"); // Obtém o botão de fechar
 
-    // Obtenha o botão de fechar
-    var closeBtn = document.getElementById("close-btn");
+    // Função para abrir e fechar o modal
+    const toggleModal = () => {
+        modal.classList.toggle("hide");
+        fade.classList.toggle("hide");
+    };
 
     // Função para abrir o modal com as informações do produto
-    window.openModal = function(title, description, imageSrc) {
+    window.openModal = function(title, description, imageSrc, price1, price2) {
         // Atualizar o conteúdo do modal com as informações do produto
-        document.getElementById("modal-title").textContent = title;
-        document.getElementById("modal-description").textContent = description;
+        document.getElementById("modal-title").textContent = title; // Atualiza o título no modal
+        document.getElementById("modal-description").textContent = description; // Atualiza a descrição no modal
         document.getElementById("modal-image").src = imageSrc;  // Atualiza a imagem no modal
-        modal.style.display = "block";  // Mostrar o modal
-    }
+        document.getElementById("modal-price1").textContent = price1; // Atualiza o preço1 no modal
+        document.getElementById("modal-price2").textContent = price2; // Atualiza o preço2 no modal
 
-    // Quando o usuário clicar no botão de fechar, fechar o modal
-    closeBtn.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // Quando o usuário clicar fora do modal, ele também será fechado
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        // Verifica se a descrição está vazia
+        if (!description || description.trim() === "") {
+            // Se a descrição estiver vazia, altera o top do preço1 para 40%
+            document.getElementById("modal-price1").style.top = "40%";
+        } else {
+            // Caso contrário, mantém o top do preço1 em seu valor padrão
+            document.getElementById("modal-price1").style.top = "";
         }
-    }
+        
+        // Usando a função toggleModal para mostrar o modal
+        toggleModal();
+    };
+
+    // Vincular o evento de clique ao botão de fechar no JavaScript
+    closeBtn.addEventListener('click', function() {
+        toggleModal();
+    });
+
+    // Quando o usuário clicar fora do modal (no fade), também fechará o modal
+    window.addEventListener('click', function(event) {
+        if (event.target === fade) {
+            toggleModal();
+        }
+    });
 });
