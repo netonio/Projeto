@@ -137,6 +137,35 @@
                 </div>
             </section>
 
+            <!-- Criando o Modal -->
+            <div id="modalid" class="modal hide">
+                <div class="modal-content">
+                    <!-- Cabeçalho -->
+                    <div class="modal-header">
+                        <!-- Título que será exibido -->
+                        <h2 id="modal-title"></h2>
+
+                        <!-- Botão para fechar o modal-->
+                        <button class="close" id="close-btn">Fechar</button>
+                    </div>
+                    <!-- Conteúdo -->
+                    <div class="modal-body">
+                        <!-- Imagem que será exibida -->
+                        <img id="modal-image" src="" alt="">
+
+                        <!-- Descrição que será exibida -->
+                        <div class="modal-description">
+                            <p id="modal-description"></p>
+                            <p id="modal-price1" class="modal-price"></p> <!-- Preço 1 -->
+                            <p id="modal-price2" class="modal-price"></p> <!-- Preço 2 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Criando o Fade da tela -->
+            <div id="fade" class="hide"></div>
+
             <section class="favoritos">
                 <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
                     <h2>Favoritos</h2>
@@ -144,29 +173,45 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
-                        <img src="Imagens/expresso.jpg" alt="cafe" class="produto">
+                    <figure onclick="openModal('Expresso',
+                    'Xícara de café expresso',
+                    'Imagens/expresso.jpg',
+                    '60ml - R$8,00',
+                    '120ml - R$14,00')">
+                        <img src="Imagens/expresso.jpg" alt="Xícara de café Expresso" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso <hr>
                             <p>Xícara de café expresso</p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/expressodescafeinado.jpg" alt="cafe" class="produto">
+                    <figure onclick="openModal('Expresso Descafeinado',
+                    'Xícara de café expresso sem cafeína',
+                    'Imagens/expressodescafeinado.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$15,00')">
+                        <img src="Imagens/expressodescafeinado.jpg" alt="Xícara de café Expresso Descafeinado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso Descafeinado <hr>
                             <p>Xícara de café expresso sem cafeína</p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/machiattochantilly.jpg" alt="cafe" class="produto">
+                    <figure onclick="openModal('Expresso com Chantilly',
+                    'Xícara de café com chantilly',
+                    'Imagens/machiattochantilly.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$15,00')">
+                        <img src="Imagens/machiattochantilly.jpg" alt="Xícara de café Expresso com Chantilly" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso com Chantilly <hr>
                             <p>Xícara de café com chantilly</p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/machiatto.jpg" alt="cafe" class="produto">
+                    <figure onclick="openModal('Expresso Machiatto',
+                    'Xícara de café com leite',
+                    'Imagens/machiatto.jpg',
+                    '60ml - R$9,00',
+                    '120ml - R$15,00')">
+                        <img src="Imagens/machiatto.jpg" alt="Xícara de café Expresso Machiatto" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso Machiatto <hr>
                             <p>Xícara de café com leite</p>
@@ -182,32 +227,48 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container">
-                    <figure>
-                        <img src="Imagens/cappuccinodiet.jpg" alt="cafe" class="produto">
+                    <figure onclick="openModal('Cappuccino Diet',
+                    'Xícara de café batido com leite, zero açúcar',
+                    'Imagens/cappuccinodiet.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$15,00')">
+                        <img src="Imagens/cappuccinodiet.jpg" alt="Xícara de Cappuccino Diet" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cappuccino Diet<hr>
                             <p>Xícara de café batido com leite, zero açúcar</p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/cappuccinoavela.jpg" alt="cafe" class="produto">
+                    <figure onclick="openModal('Cappuccino com Avelã',
+                    'Xícara de café batido com leite e avelã',
+                    'Imagens/cappuccinoavela.jpg',
+                    '',
+                    '120ml - R$18,00')">
+                        <img src="Imagens/cappuccinoavela.jpg" alt="Xícara de Cappuccino com Avelã" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cappuccino com Avelã<hr>
                             <p>Xícara de café batido com leite e avelã</p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/quiche.jpg" alt="cafe" class="produto">
+                    <figure onclick="openModal('Quiches',
+                    'Torta salgada de origem francesa, feita com massa crocante e recheio à base de creme de leite e queijo',
+                    'Imagens/quiche.jpg',
+                    '',
+                    'R$14,00')">
+                        <img src="Imagens/quiche.jpg" alt="Quiches" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Quiches<hr>
-                            <p></p>
+                            <p>Torta salgada de origem francesa, feita com uma massa crocante e recheio cremoso</p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/petitgateau.jpg" alt="cafe" class="produto">
+                    <figure onclick="openModal('Petit Gateau',
+                    'Sobremesa francesa, composta por um pequeno bolo de chocolate quente com um interior cremoso e derretido',
+                    'Imagens/petitgateau.jpg',
+                    '',
+                    'R$25,00')">
+                        <img src="Imagens/petitgateau.jpg" alt="Petit Gateau" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Petit Gateau<hr>
-                            <p>Bolinho de chocolate</p>
+                            <p>Sobremesa francesa, composta por um pequeno bolo de chocolate quente</p>
                         </figcaption>
                     </figure>
                 </div>
