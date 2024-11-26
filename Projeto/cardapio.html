@@ -108,17 +108,34 @@
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div id="myModal" class="modal">
+            <!-- Criando o Modal -->
+            <div id="modalid" class="modal hide">
                 <div class="modal-content">
-                    <!-- Botão para fechar -->
-                    <button class="close" id="close-btn">Fechar</button>
-                    <img id="modal-image" src="" alt="">
-                    <h2 id="modal-title"></h2>
-                    <p id="modal-description"></p>
-                    <p id="modal-price"></p> <!-- Aqui você pode adicionar mais informações, como preço, descrição etc. -->
+                    <!-- Cabeçalho -->
+                    <div class="modal-header">
+                        <!-- Título que será exibido -->
+                        <h2 id="modal-title"></h2>
+
+                        <!-- Botão para fechar o modal-->
+                        <button class="close" id="close-btn">Fechar</button>
+                    </div>
+                    <!-- Conteúdo -->
+                    <div class="modal-body">
+                        <!-- Imagem que será exibida -->
+                        <img id="modal-image" src="" alt="">
+
+                        <!-- Descrição que será exibida -->
+                        <div class="modal-description">
+                            <p id="modal-description"></p>
+                            <p id="modal-price1" class="modal-price"></p> <!-- Preço 1 -->
+                            <p id="modal-price2" class="modal-price"></p> <!-- Preço 2 -->
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Criando o Fade da tela -->
+            <div id="fade" class="hide"></div>
 
             <section id="cafes">
                 <div class="container"> <!--CRIANDO A CAIXA EM VOLTA DO TÓPICO-->
@@ -127,88 +144,137 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure onclick="openModal('Expresso', 'Xícara de café expresso', 'Imagens/expresso.jpg')">
+                    <!--Chamando a função de abrir o modal-->
+                    <figure onclick="openModal('Expresso',
+                    'Xícara de café expresso',
+                    'Imagens/expresso.jpg',
+                    '60ml - R$8,00',
+                    '120ml - R$14,00')">
                         <img src="Imagens/expresso.jpg" alt="Xícara de café Expresso" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso <hr>
                             <p>Xícara de café expresso</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Expresso Descafeinado',
+                    'Xícara de café expresso sem cafeína',
+                    'Imagens/expressodescafeinado.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$15,00')">
                         <img src="Imagens/expressodescafeinado.jpg" alt="Xícara de café Expresso Descafeinado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso Descafeinado <hr>
                             <p>Xícara de café expresso sem cafeína</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Expresso com Canela',
+                    'Xícara de café com canela',
+                    'Imagens/expressocanela.jpg',
+                    '60ml - R$8,00',
+                    '120ml - R$14,00')">
                         <img src="Imagens/expressocanela.jpg" alt="Xícara de café Expresso com Canela" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso com Canela <hr>
                             <p>Xícara de café com canela</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Expresso com Chantilly',
+                    'Xícara de café com chantilly',
+                    'Imagens/machiattochantilly.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$15,00')">
                         <img src="Imagens/machiattochantilly.jpg" alt="Xícara de café Expresso com Chantilly" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso com Chantilly <hr>
                             <p>Xícara de café com chantilly</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Expresso Machiatto',
+                    'Xícara de café com leite',
+                    'Imagens/machiatto.jpg',
+                    '60ml - R$9,00',
+                    '120ml - R$15,00')">
                         <img src="Imagens/machiatto.jpg" alt="Xícara de café Expresso Machiatto" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso Machiatto <hr>
                             <p>Xícara de café com leite</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Expresso Machiatto Descafeinado',
+                    'Xícara de café com leite sem cafeína',
+                    'Imagens/machiatto.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$16,00')">
                         <img src="Imagens/machiatto.jpg" alt="Xícara de café Expresso Machiatto Descafeinado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso Machiatto Descafeinado <hr>
                             <p>Xícara de café com leite sem cafeína</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Expresso Machiatto com Chantilly',
+                    'Xícara de café com leite e chantilly',
+                    'Imagens/machiattochantilly.jpg',
+                    '60ml - R$11,00',
+                    '120ml - R$16,00')">
                         <img src="Imagens/machiattochantilly.jpg" alt="Xícara de café Expresso Machiatto com Chantilly" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso Machiatto com Chantilly <hr>
                             <p>Xícara de café com leite e chantilly</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Expresso Machiatto com Canela',
+                    'Xícara de café com leite e canela',
+                    'Imagens/machiattocanela.jpg',
+                    '60ml - R$9,00',
+                    '120ml - R$15,00')">
                         <img src="Imagens/machiattocanela.jpg" alt="Xícara de café Expresso Machiatto com Canela" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso Machiatto com Canela <hr>
                             <p>Xícara de café com leite e canela</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cafés em Capsulas',
+                    'Cápsulas 3 corações',
+                    'Imagens/cafecapsula.jpg',
+                    '',
+                    '120ml - R$10,00')">
                         <img src="Imagens/cafecapsula.jpg" alt="Cafés em Capsulas" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cafés em Capsulas <hr>
                             <p>Cápsulas 3 corações</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Café Coado',
+                    'Xícara de café',
+                    'Imagens/cafecoado.jpg',
+                    '',
+                    '120ml - R$12,00')">
                         <img src="Imagens/cafecoado.jpg" alt="Xícara de café Café Coado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Café Coado <hr>
                             <p>Xícara de café</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Chá quente cápsulas',
+                    'Xícara de chá',
+                    'Imagens/chacapsula.jpg',
+                    '',
+                    '120ml - R$10,00')">
                         <img src="Imagens/chacapsula.jpg" alt="Xícara de Chá quente cápsulas" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Chá quente cápsulas <hr>
                             <p>Xícara de chá</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Chá quente (infusor)',
+                    'Xícara de chá feito com infusor',
+                    'Imagens/chainfusor.jpg',
+                    '',
+                    '120ml - R$10,00')">
                         <img src="Imagens/chainfusor.jpg" alt="Xícara de Chá quente (infusor)" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Chá quente (infusor) <hr>
-                            <p>xícara de chá feito com infusor</p>
+                            <p>Xícara de chá feito com infusor</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -221,35 +287,55 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Expresso Aromatizado',
+                    'Xícara de café aromatizada',
+                    'Imagens/expressoaromatizado.jpg',
+                    '',
+                    '120ml - R$18,00')">
                         <img src="Imagens/expressoaromatizado.jpg" alt="Xícara de café Expresso Aromatizado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Expresso Aromatizado <hr>
                             <p>Xícara de café aromatizada</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Chá quente (infusor)',
+                    'Xícara de café com leite condensado',
+                    'Imagens/cafecleitecondensado.jpg',
+                    '',
+                    '120ml - R$18,00')">
                         <img src="Imagens/cafecleitecondensado.jpg" alt="Xícara de café com Leite Condensado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Café com Leite Condensado <hr>
                             <p>Xícara de café com leite condensado</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Mocha',
+                    'Xícara de café com chocolate',
+                    'Imagens/mocha.jpg',
+                    '',
+                    '120ml - R$16,00')">
                         <img src="Imagens/mocha.jpg" alt="Xícara de café Mocha" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Mocha <hr>
                             <p>Xícara de café com chocolate</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Mocha com Chantilly',
+                    'Xícara de café com chocolate e chantilly',
+                    'Imagens/mochacchantilly.jpg',
+                    '',
+                    '120ml - R$18,00')">
                         <img src="Imagens/mochacchantilly.jpg" alt="Xícara de café Mocha com Chantilly" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Mocha com Chantilly <hr>
                             <p>Xícara de café com chocolate e chantilly</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Mocha Avelã OU Menta',
+                    'Xícara de café com chocolate e avelã OU menta',
+                    'Imagens/mochaavela.jpg',
+                    '',
+                    '120ml - R$18,00')">
                         <img src="Imagens/mochaavela.jpg" alt="Xícara de café Mocha Avelã OU Menta" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Mocha Avelã OU Menta <hr>
@@ -266,42 +352,66 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Shake de Café',
+                    'Bebida batida de café',
+                    'Imagens/shakecafe.jpg',
+                    '',
+                    '120ml - R$20,00')">
                         <img src="Imagens/shakecafe.jpg" alt="Shake de Café" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Shake de Café <hr>
                         <p>Bebida batida de café</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cappuccino Gelado',
+                    'Xícara de café batido com leite e avelã OU nutella',
+                    'Imagens/cappuccinogelado.jpg',
+                    '',
+                    '120ml - R$20,00')">
                         <img src="Imagens/cappuccinogelado.jpg" alt="Xícara de Cappuccino Gelado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cappuccino Gelado <hr>
                             <p>Xícara de café batido com leite e avelã OU nutella</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Shake de Chocolate',
+                    'Bebida batida de chocolate',
+                    'Imagens/shakechocolate.jpg',
+                    '',
+                    '120ml - R$18,00')">
                         <img src="Imagens/shakechocolate.jpg" alt="Shake de Chocolate" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Shake de Chocolate <hr>
-                            <p>Bebida batida de café</p>
+                            <p>Bebida batida de chocolate</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Frappé de Morango com Chocolate',
+                    'Bebida de café, misturado com leite, açucar, gelo, morango e chocolate',
+                    'Imagens/frappemorango.jpg',
+                    '',
+                    '120ml - R$18,00')">
                         <img src="Imagens/frappemorango.jpg" alt="Frappé de Morango com Chocolate" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Frappé de Morango com Chocolate <hr>
                             <p>Bebida de café, misturado com leite, açucar, gelo, morango e chocolate</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Frappé de Açaí com Café',
+                    'Bebida de café, misturado com leite, açucar, gelo e açaí',
+                    'Imagens/frappeacai.jpg',
+                    '',
+                    '120ml - R$18,00')">
                         <img src="Imagens/frappeacai.jpg" alt="Frappé de Açaí com Café" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Frappé de Açaí com Café <hr>
                             <p>Bebida de café, misturado com leite, açucar, gelo e açaí</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Soda Italiana',
+                    'Bebida com xarope de frutas, água gaseificada e gelo',
+                    'Imagens/sodaitaliana.png',
+                    '',
+                    '120ml - R$18,00')">
                         <img src="Imagens/sodaitaliana.png" alt="Soda Italiana" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Soda Italiana <hr>
@@ -318,25 +428,37 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Chocolate Quente Tradicional',
+                    'Bebida de chocolate e leite quente',
+                    'Imagens/chocolatequente.jpg',
+                    '',
+                    '120ml - R$15,00')">
                         <img src="Imagens/chocolatequente.jpg" alt="Chocolate Quente Tradicional" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Chocolate Quente Tradicional <hr>
                             <p>Bebida de chocolate e leite quente</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Chocolate Quente com Chantilly',
+                    'Bebida de chocolate e leite quente com chantilly',
+                    'Imagens/chocolatequentechantilly.jpg',
+                    '',
+                    '120ml - R$16,00')">
                         <img src="Imagens/chocolatequentechantilly.jpg" alt="Chocolate Quente com Chantilly" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Chocolate Quente com Chantilly <hr>
                             <p>Bebida de chocolate e leite quente com chantilly</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Chocolate Quente com Morango',
+                    'Bebida de chocolate e leite quente com geléia de morango',
+                    'Imagens/chocolatequentemorango.jpg',
+                    '',
+                    '120ml - R$16,00')">
                         <img src="Imagens/chocolatequentemorango.jpg" alt="Chocolate Quente com Morango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Chocolate Quente com Morango <hr>
-                            <p>Bebida de chocolate e leite quente com morango</p>
+                            <p>Bebida de chocolate e leite quente com geléia de morango</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -349,67 +471,103 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Cappuccino Italiano',
+                    'Xícara de café batido com leite, com espuma de leite',
+                    'Imagens/cappuccinoitaliano.jpg',
+                    '60ml - R$8,00',
+                    '120ml - R$15,00')">
                         <img src="Imagens/cappuccinoitaliano.jpg" alt="Xícara de Cappuccino Italiano" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cappuccino Italiano<hr>
                             <p>Xícara de café batido com leite, com espuma de leite</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cappuccino Tradicional com Chantilly',
+                    'Xícara de café batido com leite, com Chantilly',
+                    'Imagens/cappuccinochantilly.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$16,00')">
                         <img src="Imagens/cappuccinochantilly.jpg" alt="Xícara de Cappuccino Tradicional com Chantilly" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cappuccino Tradicional com Chantilly<hr>
                             <p>Xícara de café batido com leite, com Chantilly</p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/cappuccinoovomaltine.jpg" alt="Xícara de Cappuccino com Ovomaltine" class="produto">
-                        <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Cappuccino com Ovomaltine<hr>
-                            <p>Xícara de café batido com leite e ovomaltine</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="Imagens/cappuccinoavela.jpg" alt="Xícara de Cappuccino com Avelã" class="produto">
-                        <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Cappuccino com Avelã<hr>
-                            <p>Xícara de café batido com leite e avelã</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="Imagens/cappuccinodocedeleite.jpg" alt="Xícara de Cappuccino com Doce de Leite" class="produto">
-                        <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Cappuccino com Doce de Leite<hr>
-                            <p>Xícara de café batido com leite e doce de leite</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="Imagens/cappuccino3coracoeschantilly.jpg" alt="Xícara de Cappuccino 3 Corações com Chantilly" class="produto">
-                        <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Cappuccino 3 Corações com Chantilly<hr>
-                            <p>Xícara de café (Três Corações) batido com leite, com Chantilly</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <img src="Imagens/cappuccinodescafeinado.jpg" alt="Xícara de Cappuccino Descafeinado" class="produto">
-                        <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Cappuccino Descafeinado<hr>
-                            <p>Xícara de café batido com leite, 0 cafeína</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
+                    <figure onclick="openModal('Cappuccino 3 Corações',
+                    'Xícara de café (Três Corações) batido com leite',
+                    'Imagens/cappuccino3coracoes.jpg',
+                    '60ml - R$8,00',
+                    '120ml - R$15,00')">
                         <img src="Imagens/cappuccino3coracoes.jpg" alt="Xícara de Cappuccino 3 Corações" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cappuccino 3 Corações<hr>
                             <p>Xícara de café (Três Corações) batido com leite</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cappuccino 3 Corações com Chantilly',
+                    'Xícara de café (Três Corações) batido com leite, com Chantilly',
+                    'Imagens/cappuccino3coracoeschantilly.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$16,00')">
+                        <img src="Imagens/cappuccino3coracoeschantilly.jpg" alt="Xícara de Cappuccino 3 Corações com Chantilly" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino 3 Corações com Chantilly<hr>
+                            <p>Xícara de café (Três Corações) batido com leite, com Chantilly</p>
+                        </figcaption>
+                    </figure>
+                    <figure onclick="openModal('Cappuccino Descafeinado',
+                    'Xícara de café batido com leite, 0 cafeína',
+                    'Imagens/cappuccinodescafeinado.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$16,00')">
+                        <img src="Imagens/cappuccinodescafeinado.jpg" alt="Xícara de Cappuccino Descafeinado" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino Descafeinado<hr>
+                            <p>Xícara de café batido com leite, 0 cafeína</p>
+                        </figcaption>
+                    </figure>
+                    <figure onclick="openModal('Cappuccino Diet',
+                    'Xícara de café batido com leite, zero açúcar',
+                    'Imagens/cappuccinodiet.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$15,00')">
                         <img src="Imagens/cappuccinodiet.jpg" alt="Xícara de Cappuccino Diet" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cappuccino Diet<hr>
                             <p>Xícara de café batido com leite, zero açúcar</p>
+                        </figcaption>
+                    </figure>
+                    <figure onclick="openModal('Cappuccino com Ovomaltine',
+                    'Xícara de café batido com leite e ovomaltine',
+                    'Imagens/cappuccinoovomaltine.jpg',
+                    '60ml - R$10,00',
+                    '120ml - R$16,00')">
+                        <img src="Imagens/cappuccinoovomaltine.jpg" alt="Xícara de Cappuccino com Ovomaltine" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino com Ovomaltine<hr>
+                            <p>Xícara de café batido com leite e ovomaltine</p>
+                        </figcaption>
+                    </figure>
+                    <figure onclick="openModal('Cappuccino com Avelã',
+                    'Xícara de café batido com leite e avelã',
+                    'Imagens/cappuccinoavela.jpg',
+                    '',
+                    '120ml - R$18,00')">
+                        <img src="Imagens/cappuccinoavela.jpg" alt="Xícara de Cappuccino com Avelã" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino com Avelã<hr>
+                            <p>Xícara de café batido com leite e avelã</p>
+                        </figcaption>
+                    </figure>
+                    <figure onclick="openModal('Cappuccino com Doce de Leite',
+                    'Xícara de café batido com leite e doce de leite',
+                    'Imagens/cappuccinodocedeleite.jpg',
+                    '',
+                    '120ml - R$18,00')">
+                        <img src="Imagens/cappuccinodocedeleite.jpg" alt="Xícara de Cappuccino com Doce de Leite" class="produto">
+                        <!--CRIANDO A LEGENDA:-->
+                        <figcaption>Cappuccino com Doce de Leite<hr>
+                            <p>Xícara de café batido com leite e doce de leite</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -422,105 +580,165 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Água Mineral sem Gás',
+                    '',
+                    'Imagens/agua.jpg',
+                    'R$4,00',
+                    '')">
                         <img src="Imagens/agua.jpg" alt="Água Mineral sem Gás" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Água Mineral sem Gás<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Água Mineral com Gás',
+                    '',
+                    'Imagens/aguacgas.jpg',
+                    'R$5,00',
+                    '')">
                         <img src="Imagens/aguacgas.jpg" alt="Água Mineral com Gás" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Água Mineral com Gás<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Suco Del Valle',
+                    'Sabor Laranja OU Uva',
+                    'Imagens/sucodelvalle.jpg',
+                    '',
+                    'R$8,00')"> <!--Valor colocado no preço 2 para melhor estética-->
                         <img src="Imagens/sucodelvalle.jpg" alt="Suco Del Valle" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Suco Del Valle<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Refrigerante em Lata',
+                    '',
+                    'Imagens/refrilata.jpg',
+                    'R$8,00',
+                    '')">
                         <img src="Imagens/refrilata.jpg" alt="Refrigerante em Lata" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Refrigerante em Lata<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/refrilitro.jpg" alt="Refrigerante" class="produto">
+                    <figure onclick="openModal('Refrigerante',
+                    '',
+                    'Imagens/refrigerante.jpg',
+                    '250ml - R$5,00',
+                    '')">
+                        <img src="Imagens/refrigerante.jpg" alt="Refrigerante" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Refrigerante<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('H2O',
+                    '',
+                    'Imagens/h2o.jpg',
+                    'R$10,00',
+                    '')">
                         <img src="Imagens/h2o.jpg" alt="Bebida H2O" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>H2O<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Chá Gelado Leão',
+                    '',
+                    'Imagens/chagelado.jpg',
+                    'R$8,00',
+                    '')">
                         <img src="Imagens/chagelado.jpg" alt="Xícara de Chá Gelado Leão" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Chá Gelado Leão<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Chá Gelado - Infusor',
+                    '',
+                    'Imagens/chainfusor.jpg',
+                    'R$10,00',
+                    '')">
                         <img src="Imagens/chainfusor.jpg" alt="Xícara de Chá Gelado - Infusor" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Chá Gelado - Infusor<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Chá Gelado Especial',
+                    '',
+                    'Imagens/chaleao.jpg',
+                    'R$12,00',
+                    '')">
                         <img src="Imagens/chaleao.jpg" alt="Xícara de Chá Gelado Especial" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Chá Gelado Especial<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Suco de Laranja',
+                    '',
+                    'Imagens/sucolaranja.jpg',
+                    'R$8,00',
+                    '')">
                         <img src="Imagens/sucolaranja.jpg" alt="Copo de Suco de Laranja" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Suco de Laranja<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Suco de Polpa com Leite',
+                    '',
+                    'Imagens/sucopolpa.jpg',
+                    'R$10,00',
+                    '')">
                         <img src="Imagens/sucopolpa.jpg" alt="Copo de Suco de Polpa com Leite" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Suco de Polpa com Leite<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Suplemento Alimentar',
+                    '',
+                    'Imagens/suplemento.jpg',
+                    'R$10,00',
+                    '')">
                         <img src="Imagens/suplemento.jpg" alt="Suplemento Alimentar" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Suplemento Alimentar<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Energético',
+                    '',
+                    'Imagens/energetico.jpg',
+                    'R$15,00',
+                    '')">
                         <img src="Imagens/energetico.jpg" alt="Energético" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Energético<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <img src="Imagens/licor.jpg" alt="Taça Licor" class="produto">
+                    <figure onclick="openModal('Licor',
+                    'Cálice de Licor',
+                    'Imagens/licor.jpg',
+                    '',
+                    'R$16,00')"> <!--Valor colocado no preço 2 para melhor estética-->
+                        <img src="Imagens/licor.jpg" alt="Cálice de Licor" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Licor<hr>
                             <p></p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Vinho do Porto',
+                    'Taça de Vinho do Porto',
+                    'Imagens/vinho.jpg',
+                    '',
+                    '50ml - R$18,00')"> <!--Valor colocado no preço 2 para melhor estética-->
                         <img src="Imagens/vinho.jpg" alt="Taça de Vinho do Porto" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Vinho do Porto<hr>
@@ -537,95 +755,147 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Croissant',
+                    'Massa folhada em formato de meia-lua',
+                    'Imagens/croissant.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/croissant.jpg" alt="Croissant" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Croissant<hr>
-                            <p></p>
+                            <p>Massa folhada em formato de meia-lua</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Folhado',
+                    'Massa folhada recheada com queijo',
+                    'Imagens/folhado.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/folhado.jpg" alt="Folhado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Folhado<hr>
-                            <p></p>
+                            <p>Massa folhada recheada com queijo</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Croissant Gourmet',
+                    ' Versão sofisticada do tradicional croissant, com massa folhadae recheios exclusivos',
+                    'Imagens/croissantgourmet.jpg',
+                    '',
+                    'R$20,00')">
                         <img src="Imagens/croissantgourmet.jpg" alt="Croissant Gourmet" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Croissant Gourmet<hr>
-                            <p></p>
+                            <p>Massa folhada em formato de meia-lua recheada</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pão de Batata',
+                    'Pão macio e leve, feito com batata cozida',
+                    'Imagens/paobatata.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/paobatata.jpg" alt="Pão de Batata" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão de Batata<hr>
-                            <p></p>
+                            <p>Pão macio e leve, feito com batata cozida</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Mini Croissant',
+                    'Pequenas versões do clássico croissant francês, com massa folhada leve e crocante',
+                    'Imagens/minicroissant.jpg',
+                    '',
+                    '3 uni. - R$12,00')">
                         <img src="Imagens/minicroissant.jpg" alt="Mini Croissant" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Mini Croissant<hr>
-                            <p></p>
+                            <p>Pequenas versões do clássico croissant francês, com massa folhada leve e crocante</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Coxinha de Frango',
+                    'Tradicional salgado brasileiro, feita com massa cremosa de batata, recheada com frango',
+                    'Imagens/coxinha.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/coxinha.jpg" alt="Coxinha de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Coxinha de Frango<hr>
-                            <p></p>
+                            <p>Feita com massa cremosa de batata, recheada com frango</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Coxinha de Frango e Requeijão',
+                    'Feita com massa cremosa de batata, recheada com frango e requeijão',
+                    'Imagens/coxinhafrangocrequeijao.jpg',
+                    '',
+                    'R$13,00')">
                         <img src="Imagens/coxinhafrangocrequeijao.jpg" alt="Coxinha de Frango e Requeijão" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Coxinha de Frango e Requeijão<hr>
-                            <p></p>
+                            <p>Feita com massa cremosa de batata, recheada com frango e requeijão</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Coxinha de Charque',
+                    'Tradicional salgado brasileiro, feita com massa cremosa de batata, recheada com charque',
+                    'Imagens/coxinhacharque.jpg',
+                    '',
+                    'R$15,00')">
                         <img src="Imagens/coxinhacharque.jpg" alt="Coxinha de Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Coxinha de Charque<hr>
-                            <p></p>
+                            <p>Feita com massa cremosa de batata, recheada com charque</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Coxinha de Camarão',
+                    'Tradicional salgado brasileiro, feita com massa cremosa de batata, recheada com camarão',
+                    'Imagens/coxinhacamarao.jpg',
+                    '',
+                    'R$15,00')">
                         <img src="Imagens/coxinhacamarao.jpg" alt="Coxinha de Camarão" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Coxinha de Camarão<hr>
-                            <p></p>
+                            <p>Feita com massa cremosa de batata, recheada com camarão</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Empada',
+                    'Tradicional salgado de massa quebradiça e leve, recheado com frango',
+                    'Imagens/empada.jpg',
+                    '',
+                    'R$10,00')">
                         <img src="Imagens/empada.jpg" alt="Empada" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Empada<hr>
-                            <p></p>
+                            <p>Tradicional salgado de massa quebradiça e leve, recheado com frango</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pastel de Forno',
+                    'Salgado assado, com massa leve e crocante, recheado com frango',
+                    'Imagens/pasteldeforno.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/pasteldeforno.jpg" alt="Pastel de Forno" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pastel de Forno<hr>
-                            <p></p>
+                            <p>Salgado assado, com massa leve e crocante, recheado com frango</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pão de Queijo',
+                    'Delicioso quitute tradicional brasileiro, feito com polvilho e queijo',
+                    'Imagens/paoqueijo.jpg',
+                    '',
+                    '6 uni. - R$10,00')">
                         <img src="Imagens/paoqueijo.jpg" alt="Pão de Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão de Queijo<hr>
-                            <p></p>
+                            <p>Delicioso quitute tradicional brasileiro, feito com polvilho e queijo</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Quiches',
+                    'Torta salgada de origem francesa, feita com massa crocante e recheio à base de creme de leite e queijo',
+                    'Imagens/quiche.jpg',
+                    '',
+                    'R$14,00')">
                         <img src="Imagens/quiche.jpg" alt="Quiches" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Quiches<hr>
-                            <p></p>
+                            <p>Torta salgada de origem francesa, feita com uma massa crocante e recheio cremoso</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -638,81 +908,125 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Sanduíche de Queijo OU Misto',
+                    'Feito com fatias de pão de forma, presunto e queijo, grelhado até que o queijo derreta',
+                    'Imagens/sanduichemisto.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/sanduichemisto.jpg" alt="Sanduíche de Queijo OU Misto" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Queijo OU Misto<hr>
-                            <p></p>
+                            <p>Feito com fatias de pão de forma, presunto e queijo</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Sanduíche Americano',
+                    'Composto por fatias de pão de forma, recheado com presunto, queijo, alface, tomate e maionese',
+                    'Imagens/sanduicheamericano.jpg',
+                    '',
+                    'R$15,00')">
                         <img src="Imagens/sanduicheamericano.jpg" alt="Sanduíche Americano" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche Americano<hr>
-                            <p></p>
+                            <p>Composto por fatias de pão de forma, recheado com presunto, queijo, alface, tomate e maionese</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Sanduíche de Peito de Peru e Cream Cheese',
+                    'Composto por fatias de peito de peru e cream cheese cremoso',
+                    'Imagens/sanduichepeitodeperu.jpg',
+                    'Quente - R$13,00',
+                    'Frio - R$17,00')">
                         <img src="Imagens/sanduichepeitodeperu.jpg" alt="Sanduíche de Peito de Peru e Cream Cheese" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Peito de Peru e Cream Cheese<hr>
-                            <p></p>
+                            <p>Composto por fatias de peito de peru, cream cheese cremoso e temperos sutis</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pão na Chapa',
+                    'Fatia de pão levemente untada com manteiga e dourada na chapa até ficar crocante',
+                    'Imagens/paonachapa.jpg',
+                    '',
+                    'R$5,00')">
                         <img src="Imagens/paonachapa.jpg" alt="Pão na Chapa" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão na Chapa<hr>
-                            <p></p>
+                            <p>Fatia de pão levemente untada com manteiga e depois dourada na chapa até ficar crocante</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pão na Chapa com Requeijão',
+                    'Fatia de pão untada com manteiga e dourada na chapa até ficar crocante, com requeijão',
+                    'Imagens/paonachaparequeijao.jpg',
+                    '',
+                    'R$7,00')">
                         <img src="Imagens/paonachaparequeijao.jpg" alt="Pão na Chapa com Requeijão" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão na Chapa com Requeijão<hr>
-                            <p></p>
+                            <p>Fatia de pão levemente untada com manteiga e depois dourada na chapa até ficar crocante, com requeijão</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pão de Queijo com Cream Cheese',
+                    'Uma versão mais cremosa do tradicional pão de queijo brasileiro, recheado com cream cheese',
+                    'Imagens/paodequeijo.jpg',
+                    '',
+                    'R$10,00')">
                         <img src="Imagens/paodequeijo.jpg" alt="Pão de Queijo com Cream Cheese" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão de Queijo com Cream Cheese<hr>
-                            <p></p>
+                            <p>Uma versão mais cremosa do tradicional pão de queijo brasileiro, recheado com cream cheese</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pão de Queijo com Peito de Peru e Cream Cheese',
+                    'Pão de queijo recheado com fatias finas de peito de peru e uma camada de cream cheese',
+                    'Imagens/paodequeijopeitodeperu.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/paodequeijopeitodeperu.jpg" alt="Pão de Queijo com Peito de Peru e Cream Cheese" class="produto">
                         <!--CRIANDO A LEGENDA:-->
-                        <figcaption>Pão de Queijo com Peito de Peru e Cream Cheese<hr>
-                            <p></p>
+                        <figcaption>Pão de Queijo com Peito de Peru<hr>
+                            <p>Pão de queijo recheado com fatias de peito de peru e uma camada de cream cheese</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pão de Queijo Doce',
+                    'Clássico pão de queijo brasileiro, recheado com: Ovomaltine OU Nutella',
+                    'Imagens/paodequeijodoce.jpg',
+                    '',
+                    'R$13,00')">
                         <img src="Imagens/paodequeijodoce.jpg" alt="Pão de Queijo Doce" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pão de Queijo Doce<hr>
-                            <p></p>
+                            <p>Clássico pão de queijo brasileiro com recheio doce</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Sanduíche de Mortadela (Ouro)',
+                    'Versão do sanduíche de mortadela, utilizando a mortadela (ouro), com sabor mais refinado',
+                    'Imagens/sanduichemortadela.jpg',
+                    '',
+                    'R$22,00')">
                         <img src="Imagens/sanduichemortadela.jpg" alt="Sanduíche de Mortadela 'Ouro'" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Mortadela "Ouro"<hr>
-                            <p></p>
+                            <p>Versão do clássico sanduíche de mortadela, utilizando a mortadela "ouro"</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Sanduíche de Frango',
+                    'Feito com peito de frango desfiado, acompanhado de ingredientes como alface, tomate e maionese',
+                    'Imagens/sanduichefrango.jpg',
+                    '',
+                    'Integral - R$17,00')">
                         <img src="Imagens/sanduichefrango.jpg" alt="Sanduíche de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Frango<hr>
-                            <p></p>
+                            <p>Feito com peito de frango desfiado, com alface, tomate e maionese</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Sanduíche de Atum',
+                    'Feito com atum em conserva, acompanhado de ingredientes como alface, tomate e maionese',
+                    'Imagens/sanduicheatum.jpg',
+                    '',
+                    'Integral - R$17,00')">
                         <img src="Imagens/sanduicheatum.jpg" alt="Sanduíche de Atum" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Sanduíche de Atum<hr>
-                            <p></p>
+                            <p>Feito com atum, com alface, tomate e maionese</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -725,151 +1039,235 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Cuscuz Amanteigado',
+                    'Preparado com flocos de milho cozidos, com manteiga, resultando em uma textura macia',
+                    'Imagens/cuscuz.jpg',
+                    '',
+                    'R$8,00')">
                         <img src="Imagens/cuscuz.jpg" alt="Cuscuz Amanteigado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz Amanteigado<hr>
-                            <p></p>
+                            <p>Preparado com flocos de milho cozidos, com manteiga</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cuscuz Recheado Charque',
+                    'Variação do cuscuz nordestino, recheado com carne de charque desfiada e bem temperada',
+                    'Imagens/cuscuzrecheadocharque.jpg',
+                    '',
+                    'R$16,00')">
                         <img src="Imagens/cuscuzrecheadocharque.jpg" alt="Cuscuz Recheado Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz Recheado Charque<hr>
-                            <p></p>
+                            <p>Variação do cuscuz nordestino, recheado com carne de charque desfiada</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cuscuz Recheado Frango',
+                    'Variação  do cuscuz nordestino, recheado com frango desfiado e bem temperado',
+                    'Imagens/cuscuzrecheadofrango.jpg',
+                    '',
+                    'R$13,00')">
                         <img src="Imagens/cuscuzrecheadofrango.jpg" alt="Cuscuz Recheado Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz Recheado Frango<hr>
-                            <p></p>
+                            <p>Variação do cuscuz nordestino, recheado com frango desfiado</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cuscuz com Queijo Coalho',
+                    'Variação do cuscuz nordestino, recheado com queijo coalho derretido',
+                    'Imagens/cuscuzrecheadoqueijo.jpg',
+                    '',
+                    'R$13,00')">
                         <img src="Imagens/cuscuzrecheadoqueijo.jpg" alt="Cuscuz com Queijo Coalho" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz com Queijo Coalho<hr>
-                            <p></p>
+                            <p>Variação do cuscuz nordestino, recheado com queijo coalho</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cuscuz Frango com Queijo',
+                    'Variação do cuscuz nordestino, recheado com frango desfiado e com queijo coalho derretido',
+                    'Imagens/cuscuzrecheadofrangocqueijo.jpg',
+                    '',
+                    'R$15,00')">
                         <img src="Imagens/cuscuzrecheadofrangocqueijo.jpg" alt="Cuscuz Frango com Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cuscuz Frango com Queijo <hr>
-                            <p></p>
+                            <p>Variação do cuscuz nordestino, recheado com frango e queijo coalho</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pamonha',
+                    'Feita de milho verde ralado, misturado com açúcar, sal, e leite',
+                    'Imagens/pamonha.jpg',
+                    '',
+                    'R$10,00')">
                         <img src="Imagens/pamonha.jpg" alt="Pamonha" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pamonha<hr>
-                            <p></p>
+                            <p>Feita de milho verde ralado, misturado com açúcar, sal, e leite</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pamonha com Queijo',
+                    'Feita de milho verde ralado, misturado com açúcar, sal, leite e queijo',
+                    'Imagens/pamonhacqueijo.jpg',
+                    '',
+                    'R$15,00')">
                         <img src="Imagens/pamonhacqueijo.jpg" alt="Pamonha com Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pamonha com Queijo<hr>
-                            <p></p>
+                            <p>Feita de milho verde ralado, misturado com açúcar, sal, leite e queijo</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Omelete de Queijo',
+                    'Omelete simples e saborosa, feita com ovos batidos e queijo derretido',
+                    'Imagens/omeletequeijo.jpg',
+                    '',
+                    'R$10,00')">
                         <img src="Imagens/omeletequeijo.jpg" alt="Omelete de Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Omelete de Queijo<hr>
-                            <p></p>
+                            <p>Omelete simples e saboroso, feito com ovos batidos e queijo derretido</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Omelete de Frango',
+                    'Omelete feito com ovos batidos e frango desfiado',
+                    'Imagens/omeletefrango.jpg',
+                    '',
+                    'R$14,00')">
                         <img src="Imagens/omeletefrango.jpg" alt="Omelete de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Omelete de Frango<hr>
-                            <p></p>
+                            <p>Omelete feito com ovos batidos e frango desfiado</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Omelete de Charque',
+                    'Omelete feito com ovos batidos e carne de charque desfiada',
+                    'Imagens/omeletecharque.jpg',
+                    '',
+                    'R$16,00')">
                         <img src="Imagens/omeletecharque.jpg" alt="Omelete de Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Omelete de Charque<hr>
-                            <p></p>
+                            <p>Omelete feito com ovos batidos e carne de charque desfiada</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Crepioca de Queijo',
+                    'Feita com a mistura de goma de tapioca e ovo, recheada com queijo derretido',
+                    'Imagens/crepiocaqueijo.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/crepiocaqueijo.jpg" alt="Crepioca de Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Crepioca de Queijo<hr>
-                            <p></p>
+                            <p>Feita com a mistura de goma de tapioca e ovo, recheada com queijo derretido</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Crepioca de Frango',
+                    'Feito com goma de tapioca e ovo, recheado com frango desfiado',
+                    'Imagens/crepiocafrango.jpg',
+                    '',
+                    'R$16,00')">
                         <img src="Imagens/crepiocafrango.jpg" alt="Crepioca de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Crepioca de Frango<hr>
-                            <p></p>
+                            <p>Feito com goma de tapioca e ovo, recheado com frango desfiado</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Crepioca de Charque',
+                    'Feito com goma de tapioca e ovo, recheado com carne de charque desfiada',
+                    'Imagens/crepiocacharque.jpg',
+                    '',
+                    'R$20,00')">
                         <img src="Imagens/crepiocacharque.jpg" alt="Crepioca de Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Crepioca de Charque<hr>
-                            <p></p>
+                            <p>Feito com goma de tapioca e ovo, recheado com carne de charque desfiada</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Tapioca de Queijo Coalho',
+                    'Tapioca recheada com queijo coalho',
+                    'Imagens/tapiocaqueijo.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/tapiocaqueijo.jpg" alt="Tapioca de Queijo Coalho" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Queijo Coalho<hr>
-                            <p></p>
+                            <p>Tapioca recheada com queijo coalho</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Tapioca de Frango',
+                    'Tapioca recheada com frango desfiado e temperado',
+                    'Imagens/tapiocafrango.jpg',
+                    '',
+                    'R$14,00')">
                         <img src="Imagens/tapiocafrango.jpg" alt="Tapioca de Frango" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Frango<hr>
-                            <p></p>
+                            <p>Tapioca recheada com frango desfiado e temperado</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Tapioca de Frango com Queijo',
+                    'Tapioca recheada com frango desfiado e queijo coalho',
+                    'Imagens/tapiocafrangocqueijo.jpg',
+                    '',
+                    'R$16,00')">
                         <img src="Imagens/tapiocafrangocqueijo.jpg" alt="Tapioca de Frango com Queijo" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Frango com Queijo<hr>
-                            <p></p>
+                            <p>Tapioca recheada com frango desfiado e queijo coalho</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Tapioca de Coco com Leite Condensado',
+                    'Tapioca recheada com coco e leite condensado',
+                    'Imagens/tapiocacoco.jpg',
+                    '',
+                    'R$13,00')">
                         <img src="Imagens/tapiocacoco.jpg" alt="Tapioca de Coco com Leite Condensado" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Coco com Leite Condensado<hr>
-                            <p></p>
+                            <p>Tapioca recheada com coco e leite condensado</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Tapioca de Charque',
+                    'Tapioca recheada com charque',
+                    'Imagens/tapiocacharque.jpg',
+                    '',
+                    'R$16,00')">
                         <img src="Imagens/tapiocacharque.jpg" alt="Tapioca de Charque" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tapioca de Charque<hr>
-                            <p></p>
+                            <p>Tapioca recheada com charque</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Ovos Mexidos',
+                    'Prato simples e saboroso, feito com ovos batidos e cozidos em uma frigideira',
+                    'Imagens/ovosmexidos.jpg',
+                    '',
+                    'R$5,00')">
                         <img src="Imagens/ovosmexidos.jpg" alt="Ovos Mexidos" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Ovos Mexidos<hr>
-                            <p></p>
+                            <p>Prato simples e saboroso, feito com ovos batidos e cozidos</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Fatia de Queijo Coalho',
+                    'Fatia do tradicional queijo coalho grelhado, com sabor suave e textura firme',
+                    'Imagens/queijocoalho.jpg',
+                    '',
+                    'R$6,00')">
                         <img src="Imagens/queijocoalho.jpg" alt="Fatia de Queijo Coalho" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Fatia de Queijo Coalho<hr>
-                            <p></p>
+                            <p>Fatia do tradicional queijo coalho grelhado</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Leite',
+                    'Copo de leite',
+                    'Imagens/copodeleite.jpg',
+                    '',
+                    'R$4,00')">
                         <img src="Imagens/copodeleite.jpg" alt="Copo de Leite" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Leite<hr>
-                            <p></p>
+                            <p>Copo de leite</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -882,95 +1280,147 @@
                 <hr>
                 <!--CRIANDO A CAIXA COM IMAGENS:-->
                 <div class="image-container"> 
-                    <figure>
+                    <figure onclick="openModal('Bolo Tradicional',
+                    'Fatia de delicioso bolo caseiro, macio e fofinho, preparado com ingredientes simples e frescos',
+                    'Imagens/bolotradicional.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/bolotradicional.jpg" alt="Fatia de Bolo Tradicional" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Bolo Tradicional<hr>
-                            <p>Fatia de bolo de massa</p>
+                            <p>Fatia de delicioso bolo caseiro, macio e fofinho, preparado com ingredientes simples</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Tortas',
+                    'Deliciosas sobremesas, compostos por uma base de massa crocante, com diversos tipos de recheios',
+                    'Imagens/torta.jpg',
+                    '',
+                    'R$14,00')">
                         <img src="Imagens/torta.jpg" alt="Fatia de Torta" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Tortas<hr>
-                            <p>Fatia de torta</p>
+                            <p>Deliciosas sobremesas, compostos por uma base de massa crocante, com diversos tipos de recheios</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cheesecake',
+                    'Fatia de torta feita à base de biscoito e cream cheese, com recheios: Chocolate, Cappuccino, Goiabada ou Morango',
+                    'Imagens/cheesecake.jpg',
+                    '',
+                    'R$16,00')">
                         <img src="Imagens/cheesecake.jpg" alt="Fatia de Cheesecake" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cheesecake<hr>
                             <p>Fatia de torta feita à base de biscoito e cream cheese</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Brigadeirão',
+                    'Fatia de tradicional sobremesa brasileira, é uma versão de pudim, feita à base de leite condensado e chocolate em pó',
+                    'Imagens/brigadeirao.jpg',
+                    '',
+                    'R$8,00')">
                         <img src="Imagens/brigadeirao.jpg" alt="Brigadeirão" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Brigadeirão<hr>
-                            <p>Sobremesa de brigadeiro</p>
+                            <p>Tradicional sobremesa brasileira, é uma versão de pudim</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Queijadinha',
+                    'Sobremesa tradicional brasileira, feita com coco ralado, queijo parmesão, leite condensado e ovos',
+                    'Imagens/queijadinha.jpg',
+                    '',
+                    'R$8,00')">
                         <img src="Imagens/queijadinha.jpg" alt="Queijadinha" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Queijadinha<hr>
-                            <p>Docinho de leite condensado, coco e queijo parmesão</p>
+                            <p>Sobremesa de leite condensado, coco ralado e queijo parmesão</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Bolo de Noiva',
+                    'Fatia de tradicional bolo recheado com frutas cristalizadas coberto com uma camada generosa de glacê branco',
+                    'Imagens/bolodenoiva.jpg',
+                    '',
+                    'R$16,00')">
                         <img src="Imagens/bolodenoiva.jpg" alt="Fatia de Bolo de Noiva" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Bolo de Noiva<hr>
-                            <p>Fatia de bolo de ameixa</p>
+                            <p>Fatia de tradicional bolo recheado com frutas cristalizadas</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Petit Gateau',
+                    'Sobremesa francesa, composta por um pequeno bolo de chocolate quente com um interior cremoso e derretido',
+                    'Imagens/petitgateau.jpg',
+                    '',
+                    'R$25,00')">
                         <img src="Imagens/petitgateau.jpg" alt="Petit Gateau" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Petit Gateau<hr>
-                            <p>Bolinho de chocolate</p>
+                            <p>Sobremesa francesa, composta por um pequeno bolo de chocolate quente</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cartola tradicional',
+                    'A cartola é feita com fatias de banana frita, cobertas com queijo coalho derretido e polvilhadas com açúcar e canela',
+                    'Imagens/cartola.jpg',
+                    '',
+                    'R$20,00')">
                         <img src="Imagens/cartola.jpg" alt="Cartola tradicional" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cartola tradicional<hr>
-                            <p>Banana frita,manteiga, açúcar e canela</p>
+                            <p>Feita com fatias de banana frita, cobertas com queijo coalho derretido</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Cartola Chocolate',
+                    'Versão da cartola com uma camada de chocolate derretido',
+                    'Imagens/cartolachocolate.jpg',
+                    '',
+                    'R$22,00')">
                         <img src="Imagens/cartolachocolate.jpg" alt="Cartola Chocolate" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Cartola Chocolate<hr>
-                            <p>Banana frita,manteiga, açúcar,canela e chocolate</p>
+                            <p>Feita com fatias de banana frita, cobertas com chocolate derretido</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Donuts Tradicional',
+                    'Bolo frito de origem americana, com uma textura leve e fofinha, com cobertura e polvilhado com açúcar',
+                    'Imagens/donuts.jpg',
+                    '',
+                    'R$10,00')">
                         <img src="Imagens/donuts.jpg" alt="Donuts Tradicional" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Donuts Tradicional<hr>
-                            <p>Massa açucarada frita com cobertura</p>
+                            <p>Massa de origem americana frita com cobertura</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Donuts Especial',
+                    'versão gourmet e criativa do clássico donut, massa de origem americana frita com cobertura especial',
+                    'Imagens/donutsespecial.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/donutsespecial.jpg" alt="Donuts Especial" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Donuts Especial<hr>
-                            <p>Massa açucarada frita com cobertura especial</p>
+                            <p>Massa de origem americana frita com cobertura especial</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Salada de Fruta',
+                    'A salada de fruta é uma mistura de frutas frescas e cortadas em pedaços, com leite condensado',
+                    'Imagens/saladadefruta.jpg',
+                    '',
+                    'R$12,00')">
                         <img src="Imagens/saladadefruta.jpg" alt="Salada de Fruta" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Salada de Fruta<hr>
-                            <p>Salada feita com frutas frescas</p>
+                            <p>Salada feita com frutas frescas, cobertas com leite condensado</p>
                         </figcaption>
                     </figure>
-                    <figure>
+                    <figure onclick="openModal('Pudim',
+                    'Fatia de sobremesa cremosa, feita com leite condensado, ovos, leite e açúcar, que resulta em um sabor doce e suave',
+                    'Imagens/pudim.jpg',
+                    '',
+                    'R$10,00')">
                         <img src="Imagens/pudim.jpg" alt="Fatia de Pudim" class="produto">
                         <!--CRIANDO A LEGENDA:-->
                         <figcaption>Pudim<hr>
-                            <p>Doce feito de leite condensado e calda de caramelo</p>
+                            <p>Sobremesa cremosa, feita com leite condensado, ovos, leite e açúcar</p>
                         </figcaption>
                     </figure>
                 </div>
