@@ -73,7 +73,6 @@ function mudarTema() {
         root.style.setProperty('--cor-secundaria', 'rgb(195, 195, 140)');
         root.style.setProperty('--cor-fonte', 'rgb(77, 54, 35)');
         localStorage.setItem('tema', 'escuro') // Armazena a preferência
-        document.querySelector
     } else {
         root.style.setProperty('--cor-principal', 'rgb(56, 133, 124)');
         root.style.setProperty('--cor-secundaria', 'rgb(255,255,255)');
