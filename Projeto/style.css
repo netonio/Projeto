@@ -390,6 +390,7 @@ figcaption label{
 
 .carrossel{
     margin: 20px 0;
+    margin-bottom: 40px;
     margin-left: -1.5%;
     width: 103%;
     height: 350px;
