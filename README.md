@@ -18,9 +18,9 @@ Site com as seguintes funcionalidades:
 - Modo escuro / claro
 - Suporte para outros tamanhos de tela
 
-  Notas:
+Notas:
 
-  O site também contaria (se desse tempo) com as seguintes funções:
-  - Mudança de linguagens
-  - Carrinho
-  - Envio de formulário
+O site também contaria (se desse tempo) com as seguintes funções:
+- Mudança de linguagens
+- Carrinho
+- Envio de formulário
